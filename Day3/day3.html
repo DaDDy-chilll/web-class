@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day3 Home Work</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend><b>Request Form</b></legend>
+      <img src="./Bagan.jpg" alt="bagan" width="10%" />
+      <h1><i>User Information</i></h1>
+
+      <form>
+        <!-- data time -->
+        <label for="datetime">Register DateTime</label>
+        <input type="datetime" id="datetime" placeholder="2021/06/04 12:00AM" />
+        <br />
+        <br />
+
+        <!-- username -->
+        <label for="name">UserName:</label>
+        <input type="text" id="name" placeholder="john1234" />
+        <br />
+        <br />
+
+        <!-- password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" />
+        <br />
+        <br />
+
+        <!-- age -->
+        <label for="age">Age: </label>
+        <input type="number" id="age" />
+        <br />
+        <br />
+
+        <!-- gender -->
+        <label for="gender">Gender:</label>
+        <select id="gender">
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+        <br />
+        <br />
+
+        <!-- education -->
+        <label>Education:</label>
+        <input type="radio" id="ug" name="edu" />
+        <label for="ug">Under Graduated</label>
+
+        <input type="radio" id="ba" name="edu" />
+        <label for="ba">Bachelor</label>
+
+        <input type="radio" id="ma" name="edu" />
+        <label for="ma">Master</label>
+        <br />
+        <br />
+
+        <!-- card -->
+        <label>Card:</label>
+        <input type="checkbox" id="car" />
+        <label for="car">Car license</label>
+
+        <input type="checkbox" id="passport" />
+        <label for="passport">Passport</label>
+
+        <input type="checkbox" id="nrc" checked />
+        <label for="nrc">NRC</label>
+        <br />
+        <br />
+
+        <!-- hobby -->
+        <label for="hobby">Hobby</label>
+        <input type="text" id="hobby" />
+        <br />
+        <br />
+
+        <!-- file -->
+        <label for="uploadfile">Upload Your Profile</label>
+        <input type="file" id="uploadfile" />
+        <br />
+        <br />
+
+        <!-- address -->
+        <label for="address">Address</label>
+        <textarea id="address" cols="25" rows="3"></textarea>
+        <br />
+        <br />
+
+        <input type="reset" value="Default" />
+        <input type="button" value="Send" />
+      </form>
+    </fieldset>
+  </body>
+</html>
