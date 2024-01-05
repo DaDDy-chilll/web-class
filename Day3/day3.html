@@ -12,13 +12,18 @@
       <form>
         <!-- data time -->
         <label for="datetime">Register DateTime</label>
-        <input type="datetime" id="datetime" placeholder="2021/06/04 12:00AM" />
+        <input
+          type="datetime"
+          id="datetime"
+          placeholder="2021/06/04 12:00AM"
+          disabled
+        />
         <br />
         <br />
 
         <!-- username -->
         <label for="name">UserName:</label>
-        <input type="text" id="name" placeholder="john1234" />
+        <input type="text" id="name" placeholder="john1234" required />
         <br />
         <br />
 
@@ -71,8 +76,14 @@
         <br />
 
         <!-- hobby -->
-        <label for="hobby">Hobby</label>
-        <input type="text" id="hobby" />
+        <label>Hobby</label>
+        <input list="hobby" />
+        <datalist id="hobby">
+          <option value="Football"></option>
+          <option value="Pro Gamer"></option>
+          <option value="Reading"></option>
+          <option value="Developer"></option>
+        </datalist>
         <br />
         <br />
 
@@ -89,7 +100,7 @@
         <br />
 
         <input type="reset" value="Default" />
-        <input type="button" value="Send" />
+        <input type="submit" value="Send" />
       </form>
     </fieldset>
   </body>
