@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+}
+
+.nav{
+    background-color: #6a45d8;
+}
+
+.nav ul{
+    list-style: none;
+    margin: 0;
+}
