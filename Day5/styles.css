@@ -4,9 +4,49 @@ body{
 
 .nav{
     background-color: #6a45d8;
+    text-align: center;
+    padding: 15px 0;
 }
 
-.nav ul{
-    list-style: none;
-    margin: 0;
+.nav span{
+    margin: 0 50px;
+    font-size: 20px;
+    color: white;
+}
+.nav span.active{
+    text-decoration: underline;
+}
+
+.nav button{
+    color: white;
+    font-size: 18px;
+    padding: .5% 2.5%;
+    border-radius: 50px;
+    border: 3px solid white;
+    background-color: transparent;
+}
+.container{
+    /* background-color: red; */
+    /* padding: 2%; */
+    text-align: center;
+    width: 100%;
+  
+
+
+}
+/* .container tr{
+    width: 100%;
+    background-color: red;
+} */
+.container tr td{
+    padding: 2%;
+}
+.container tr td div{
+    /* width: 55%; */
+    
+    height: 350px;
+    background-color: #6a45d8;
+    color: rgb(56, 50, 50);
+    text-align: center;
+    margin: 2%;
 }
