@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: #46485D;
+    /* display: flex; */
+    color: white;
+}
+
+nav p{
+    font-family: 'Pacifico', cursive;
+
+    /* float: left; */
+    font-size: 1.2rem;
+}
+
+nav ul{
+    list-style-type: none;
+    float: right;
+}
