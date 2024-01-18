@@ -10,16 +10,38 @@ nav{
     background-color: #46485D;
     /* display: flex; */
     color: white;
+    padding: 1.5% 1%;
 }
 
-nav p{
+nav .logo{
     font-family: 'Pacifico', cursive;
-
-    /* float: left; */
     font-size: 1.2rem;
+    display: inline;
 }
 
 nav ul{
     list-style-type: none;
+    display: flex;
     float: right;
+    margin: 0;
+    background-color: red;
+}
+
+nav ul li{
+    text-decoration: none;
+    font-family: 'Road Rage';
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    background-color: green;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a.login{
+    font-family: 'Roboto Mono';
+    background-color: red;
 }
