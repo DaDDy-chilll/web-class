@@ -4,12 +4,80 @@
 body{
     margin: 0;
 }
-nav{
+
+/* Quato */
+
+.quotes_container{
+    background-color: #2b2b2b;
+    padding-top: 3%;
+}
+
+.quotes_container p{
+   margin: 0;
+}
+
+.quotes_container .quotes_title{
+    text-align: center;
+    margin: 0 0 3% 0 ;
+    font-family: 'Racing Sans One', sans-serif;
+    color: #c10f0f;
+    font-size: 2rem;
+}
+
+.quotes_container .quotes_content_container{
+    position: relative;
+}
+
+.quotes_content_container .quotes_content{
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    font-family: 'Racing Sans One', sans-serif;
+}
+
+.quotes_content p{
+    color: white;
+    font-size: 2.5rem;
+}
+
+.quotes_content .quotes_name{
+    color: #ffb900;
+    font-size: 1.9rem;
+    text-align: end;
+    margin: 10% 5%;
+}
+
+/* Series */
+.series_container{
+    background-color: #2b2b2b;
+    padding-top: 5%;
+}
+
+.series_container .series_title{
+    margin: 0 0 3% 2%;
+    font-family: 'Racing Sans One', sans-serif;
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: #c10f0f;
+}
+
+.card_container{
     display: flex;
 }
 
-nav ul{
+.card_container .movie_card{
+    width: 20%;
+}
+
+.movie_card .movie_rating{
     display: flex;
-    list-style-type: none;
-    padding: 0;
+    align-items: center;
+}
+
+.movie_rating .rating{
+    
+}
+.movie_rating p{
+    font-size: 1.2rem;
+    color: white;
 }
