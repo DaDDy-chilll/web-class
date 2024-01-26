@@ -4,7 +4,152 @@
 body{
     margin: 0;
 }
+nav{
+    /* display: flex; */
+    padding: 1.5% 2%;
+    background-color: #151515;
+}
 
+nav .nav_logo{
+    color: #c10f0f;
+    text-decoration: none;
+    font-family: 'Racing Sans One', sans-serif;
+    font-size: 2rem;
+
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    float: right;
+    margin: .5%;
+}
+nav .nav_premium{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul img{
+    width: 20%;
+}
+nav li {
+    margin: 0 10px;
+}
+nav li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+nav .nav_premium a{
+    color: #ffb900;
+}
+
+nav .active{
+    color: #c10f0f;
+}
+nav .nav_login{
+    background-color: #c10f0f;
+    color: white;
+    padding: 5px 30px;
+    font-weight: lighter;
+    border-radius: 10px;
+}
+
+/* Home Section */
+.home_container{
+    position: relative;
+}
+
+.home_container .home_content{
+    position: absolute;
+    bottom: 4%; 
+     left: 24%;
+     font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.home_content .home_title{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: white;
+    margin: 0;
+}
+.home_content .home_rating{
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.home_rating .rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 55% 0 5%;
+}
+
+.rating img{
+    height: 50%;
+}
+
+.rating p{
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+}
+
+.home_rating a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #c10f0f;
+    padding: 1% 2%;
+    border-radius: 5px;
+}
+
+/* Movies */
+.movies_container{
+    background-color: red;
+    display: flex;
+}
+
+.movies_container .movies_card{
+    width: 20%;
+    background-color: green;
+    margin: 0 5%;
+}
+.movies_card .movies_image{
+    width: 100%;
+}
+
+.movies_card .movies_content_container{
+    text-align: center;
+}
+
+.movies_content_container .movies_content{
+    display: flex;
+    background-color: black;
+}
+
+/* .movies_content .rating_premium{
+    height: 15%;
+} */
+
+.movies_content .rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating p{
+    font-size: 1rem;
+}
+
+.rating img{
+   
+}
 /* Quato */
 
 .quotes_container{
