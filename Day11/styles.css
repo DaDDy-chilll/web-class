@@ -8,7 +8,7 @@ body{
 
 nav{
     /* display: flex; */
-    padding: 1.5% 2%;
+    padding: 1% 2%;
     background-color: #151515;
 }
 
@@ -18,7 +18,7 @@ nav ul{
     list-style-type: none;
     padding: 0;
     float: right;
-    margin: .5%;
+    /* margin: .5%; */
 }
 nav .nav_premium{
     display: flex;
@@ -60,11 +60,13 @@ nav .nav_login{
 .home_container .home_content{
     position: absolute;
     bottom: 4%; 
-     left: 24%;
+    width: 100%;
+     /* left: 24%; */
+     text-align: center;
      font-family: 'Plus Jakarta Sans', sans-serif;
 }
 .home_content .home_title{
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bolder;
     color: white;
     margin: 0;
@@ -72,14 +74,19 @@ nav .nav_login{
 .home_content .home_rating{
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 2%;
+    width: 100%;
+    /* text-align: center; */
 }
 
 .home_rating .rating{
+ 
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 55% 0 5%;
+
+    /* justify-content: center;
+    align-items: center; */
+    margin: 0 40% 0 5%;
 }
 
 .rating img{
@@ -137,45 +144,50 @@ nav .nav_login{
 
 .card .card_rating{
     display: flex;
-    align-items: center;
+   align-items: center;
     padding: 0 2%;
+    width: 100%; 
+    /* text-align: center; */
 }
 
 .card_rating .rating,.card_premium{
-    width: 10%;
+    width: 15%;
 }
 .card_rating p{
     font-size: 1.2rem;
     color: white;
-    margin: 0;
-    margin-right: 67%;
+    margin-right: 52%;
 }
 
 .card .card_name{
     font-size: 1.3rem;
     color: white;
     text-transform: capitalize;
-    margin: 5%;
+    margin:0 0 10% 5%;
 
 }
 .card_btn{
-    text-align: center;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 
 .card_btn button {
+    margin: auto;
     align-items: center;
     color: #ffb900;
     background-color: transparent;
     border: 1px solid white;
-    padding: 5px 20px;
-    font-size: 1.2rem;
+    padding: 0 20px;
+    font-size: 1.1rem;
     border-radius: 5px;
     font-weight: lighter;
+    display: flex;
+    text-align: center;
+
 }
 
-.card_btn button span{
+.card_btn button p{
     font-size: 2rem;
+    margin: 0 5% 0 0;
 }
 
 
@@ -193,7 +205,7 @@ nav .nav_login{
 
 .quotes_container .quotes_title{
     text-align: center;
-    margin: 0 0 3% 0 ;
+    margin: 0 0 5% 0 ;
     font-family: 'Racing Sans One', sans-serif;
     color: #c10f0f;
     font-size: 2.5rem;
@@ -206,13 +218,13 @@ nav .nav_login{
 .quotes_content_container .quotes_content{
     position: absolute;
     top: 30%;
-    right: 10%;
+    right: 3%;
     font-family: 'Racing Sans One', sans-serif;
 }
 
 .quotes_content p{
     color: white;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .quotes_content .quotes_name{
