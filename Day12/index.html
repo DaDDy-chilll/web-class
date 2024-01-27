@@ -1,42 +1,47 @@
 <!DOCTYPE html>
-
-<head>
+<html>
+  <head>
     <title>Math Quiz</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Header -->
     <div>
-        <!-- title -->
-        <div class="title">
-            <p>Calculator Brain</p>
-        </div>
-        <!-- start and stop -->
-        <button onclick="start()"  class="btnstart activeStart" id="start">start</button>
-        <button  onclick="stop()"  class="btnstop inactiveStop" id="stop">stop</button>
+      <!-- title -->
+      <div class="title">
+        <p>Calculator Brain</p>
+      </div>
+      <!-- start and stop -->
+      <button id="startbtn" onclick="start()" class="btnstart activeStart">
+        start
+      </button>
+      <button
+        id="stopbtn"
+        onclick="stop()"
+        class="btnstop inactiveStop"
+        disabled
+      >
+        stop
+      </button>
     </div>
     <!-- body -->
     <div class="main">
-        <fieldset class="question">
-            <legend>Question</legend>
-            <span>
-                <span id="random"></span> =></span>
-        </fieldset>
-        <fieldset class="answer">
-            <legend>Answer</legend>
-            <input type="text" name="answer" id="answer">
-        </fieldset>
+      <fieldset class="question">
+        <legend>Question</legend>
+        <span> <span id="random"></span> =></span>
+      </fieldset>
+      <fieldset class="answer">
+        <legend>Answer</legend>
+        <input type="text" name="answer" id="answer" disabled />
+      </fieldset>
 
-        <button class="okbtn" onclick="check()">OK</button>
+      <button class="okbtn" onclick="check()">OK</button>
     </div>
     <div class="history">
-        <h2>History </h2>
-        <ol id="history"></ol>
+      <h2>History</h2>
+      <ol id="history"></ol>
     </div>
-
-   
-</body>
-
+  </body>
 </html>
