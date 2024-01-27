@@ -1,19 +1,79 @@
 * {
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-body{
+body {
     margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.container{
-    width: 40%;
-    height: 300px;
+.title {
+    text-align: center;
+    margin-top: 10px;
+    color: brown;
+    font-size: 18px;
+}
+
+.btnstart {
+    float: left;
+    margin-left: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 12px;
+    color: white;
+}
+
+.activeStart {
+    background-color: rgb(122, 201, 122);
+}
+
+.inactiveStart {
+    background-color: gray;
+}
+
+.btnstop {
+    float: right;
+    margin-right: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 12px;
+    color: white;
+
+}
+
+.activeStop {   
     background-color: red;
-    border-radius: 15px;
-    box-shadow: 2px 2px 2px black;
+}
+
+.inactiveStop {
+    background-color: gray;
+
+}
+
+.main{
+    clear: both;
+    margin: 50px 10px;
+
+}
+
+.question{
+    width: 40%;
+    float: left;
+}
+
+.answer{
+    width: 40%;
+
+    float: right;
+}
+.okbtn{
+    width: 20%;
+    margin-top: 20px;
+    clear: both;
+    background-color: purple;
+    color: white;
+}
+
+.history{
+    margin: 20px 10px;
 }

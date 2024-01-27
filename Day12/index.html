@@ -3,11 +3,40 @@
 <head>
     <title>Math Quiz</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <div class="start"></div>
-        <div class="quiz"></div>
+    <!-- Header -->
+    <div>
+        <!-- title -->
+        <div class="title">
+            <p>Calculator Brain</p>
+        </div>
+        <!-- start and stop -->
+        <button onclick="start()"  class="btnstart activeStart" id="start">start</button>
+        <button  onclick="stop()"  class="btnstop inactiveStop" id="stop">stop</button>
     </div>
+    <!-- body -->
+    <div class="main">
+        <fieldset class="question">
+            <legend>Question</legend>
+            <span>
+                <span id="random"></span> =></span>
+        </fieldset>
+        <fieldset class="answer">
+            <legend>Answer</legend>
+            <input type="text" name="answer" id="answer">
+        </fieldset>
+
+        <button class="okbtn" onclick="check()">OK</button>
+    </div>
+    <div class="history">
+        <h2>History </h2>
+        <ol id="history"></ol>
+    </div>
+
+   
 </body>
+
 </html>
