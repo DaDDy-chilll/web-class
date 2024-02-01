@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-*{
+
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     height: 100vh;
     display: flex;
@@ -11,7 +12,7 @@ body{
     align-items: center;
 }
 
-.container{
+.container {
     width: 40%;
     height: 50%;
     background-color: #8AA4FF;
@@ -19,21 +20,212 @@ body{
     box-shadow: 4px 2px 7px 3px #23232363;
 }
 
-.start_container{
+/* Start View */
+.start_container {
     width: 100%;
     text-align: center;
 }
 
-.start_container h1{
+.start_container h1 {
     font-family: 'Jua', sans-serif;
     text-transform: capitalize;
     font-size: 4rem;
+    color: white;
 }
 
-.hidden{
+.start_container button {
+    width: 55%;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1% 0;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5878eb;
+}
+
+button:hover path {
+    fill: white;
+}
+
+/* Quiz View */
+.quiz_container {
+    width: 100%;
+    text-align: center;
+    font-family: 'Jua', sans-serif;
+
+}
+
+.quiz_container .status {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    text-transform: capitalize;
+    color: white;
+}
+
+.status_score,
+.status_time {
+    margin: 3%;
+}
+
+.status .status_score {
+    float: left;
+}
+
+.status .status_time {
+    float: right;
+}
+
+.quiz_container .question {
+    clear: both;
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.quiz_container .answer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin: 5%;
+}
+
+.answer span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #8AA4FF;
+    transition: all .2s;
+}
+
+.answer span p {
+    font-size: 2rem;
+
+}
+
+.answer span:hover {
+    background-color: #8AA4FF;
+    color: white;
+}
+
+.quiz_container .quiz_stop {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'Jua', sans-serif;
+    padding: 1% 15%;
+    color: white;
+    background-color: #E40000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.quiz_container .quiz_stop:hover {
+    background-color: rgb(243, 95, 95);
+    color: rgb(230, 230, 230);
+}
+
+/* Result View */
+.result_container {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'Jua', sans-serif;
+
+}
+
+.result_container .result_container.result_score {
+    margin: 2%;
+}
+
+.result_score p {
+    font-size: 2rem;
+    margin: 1%;
+    text-transform: uppercase;
+}
+
+.result_container .result_detail {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 3%;
+}
+
+.result_detail .result_time,
+.result_correct,
+.result_wrong {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+
+.result_detail p {
+    margin: 0;
+
+}
+
+.result_container .result_btn {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25%;
+}
+
+.result_container .result_btn button {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: 'Jua', sans-serif;
+    padding: 3% 0;
+    margin: 2% 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.result_btn .retry {
+    background-color: white;
+    color: #8AA4FF;
+    transition: all .2s;
+}
+
+.result_btn .retry:hover {
+    background-color: #5878eb;
+    color: white;
+}
+
+.result_btn .quit {
+    background-color: #E40000;
+    color: white;
+    transition: all .2s;
+}
+
+.result_btn .quit:hover {
+    background-color: rgb(248, 213, 213);
+    color: #E40000;
+}
+
+/* Global */
+.hidden {
     display: none;
 }
 
-.show{
-    display: flex;
+.show {
+    display: block;
+}
+
+
+
+@media screen and (max-width:1025px) {
+    .container {
+        min-width: 50%;
+        min-height: 52%;
+    }
 }
