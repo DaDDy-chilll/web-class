@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 40%;
+    height: 50%;
+    background-color: #8AA4FF;
+    border-radius: 20px;
+    box-shadow: 4px 2px 7px 3px #23232363;
+}
+
+.start_container{
+    width: 100%;
+    text-align: center;
+}
+
+.start_container h1{
+    font-family: 'Jua', sans-serif;
+    text-transform: capitalize;
+    font-size: 4rem;
+}
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: flex;
+}
