@@ -7,7 +7,7 @@
   <body>
     <div class="container">
       <!-- Start View -->
-      <div class="start_container hidden" id="startContainer">
+      <div class="start_container" id="startContainer">
         <h1>math quiz</h1>
         <button onclick="startBtn()">
           <svg
@@ -32,32 +32,29 @@
           <p class="status_time">time: <span id="time">0</span></p>
         </div>
         <p class="question"><span id="question">0 + 0</span> = ?</p>
-        <div class="answer">
-          <span><p>64</p></span>
-          <span><p>123</p></span>
-          <span><p>3662</p></span>
+        <div class="answer" id="answer">
         </div>
         <button class="quiz_stop" onclick="quizStop()">stop</button>
       </div>
 
       <!-- Result View -->
-      <div class="result_container" id="resultContainer">
+      <div class="result_container hidden" id="resultContainer">
         <div class="result_score">
           <p>score</p>
-          <p>30</p>
+          <p id="resultScore">0</p>
         </div>
         <div class="result_detail">
           <div class="result_time">
             <p>time</p>
-            <p>23</p>
+            <p id="resultCount">0</p>
           </div>
           <div class="result_correct">
             <p>correct</p>
-            <p>32</p>
+            <p id="resultCorrect">0</p>
           </div>
           <div class="result_wrong">
             <p>wrong</p>
-            <p>3</p>
+            <p id="resultWrong">0</p>
           </div>
         </div>
         <div class="result_btn">

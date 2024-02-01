@@ -105,12 +105,9 @@ button:hover path {
     cursor: pointer;
     color: #8AA4FF;
     transition: all .2s;
-}
-
-.answer span p {
     font-size: 2rem;
-
 }
+
 
 .answer span:hover {
     background-color: #8AA4FF;
