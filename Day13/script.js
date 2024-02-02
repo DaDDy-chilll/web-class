@@ -22,12 +22,14 @@ var num1,
   opertaor,
   result = 0;
 
+// Game Start Button
 function startBtn() {
   startContainer.setAttribute("class", "hidden");
   quizContainer.setAttribute("class", "quiz_container show");
   startQuiz();
 }
 
+//Create a Random Question and Random Two numbers are in different position
 function startQuiz() {
   num1 = Math.floor(Math.random() * 100);
   num2 = Math.floor(Math.random() * 100);
@@ -74,6 +76,7 @@ function startQuiz() {
   }
 }
 
+//Check Answer True or False
 function checkAns(ans) {
   if (result === ans) {
     scoreCount += 10;
@@ -89,6 +92,7 @@ function checkAns(ans) {
   startQuiz();
 }
 
+//Game Stop
 function quizStop() {
   quizContainer.setAttribute("class", "hidden");
   resultContainer.setAttribute("class", "result_container show");
@@ -98,6 +102,7 @@ function quizStop() {
   resultWrong.innerText = wrongCount;
 }
 
+//Game Retry
 function retry() {
   resultContainer.setAttribute("class", "hidden");
   quizContainer.setAttribute("class", "quiz_container show");
@@ -116,6 +121,7 @@ function retry() {
   startQuiz();
 }
 
+//Game Quit
 function quit() {
   resultContainer.setAttribute("class", "hidden");
   startContainer.setAttribute("class", "start_container show");
