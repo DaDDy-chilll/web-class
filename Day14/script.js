@@ -64,7 +64,6 @@ function usrPress(cell) {
     ) {
       cell.style.background = "#f4ff2b";
     } else {
-      cell.style.background = "linear-gradient(#32FB2E,#08B204)";
       cell.style.background = "#2bff41";
     }
     clickSong.play();
@@ -90,6 +89,8 @@ function gameOver() {
 function gameWin() {
   if (clicked == 35) {
     isWin = true;
+    for (let i = 0; i < 36; i++)
+      document.getElementsByClassName("cell")[i].style.background = "#2bff41";
     gamewinSong.play();
     gameStatus.setAttribute("class", "gamestatus gamestatus_show");
     statusTitle.innerText = "game win";
