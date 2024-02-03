@@ -1,69 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mine Game</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="header">
-        <div>Mine Game</div>
+<html>
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Game container -->
+    <div class="container">
+      <table cellspacing="7px">
+        <tr>
+          <td id="11" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="12" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="13" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="14" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="15" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="16" click="0" class="cell" onclick="usrPress(this)"></td>
+        </tr>
+        <tr>
+          <td id="21" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="22" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="23" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="24" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="25" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="26" click="0" class="cell" onclick="usrPress(this)"></td>
+        </tr>
+        <tr>
+          <td id="31" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="32" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="33" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="34" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="35" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="36" click="0" class="cell" onclick="usrPress(this)"></td>
+        </tr>
+        <tr>
+          <td id="41" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="42" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="43" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="44" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="45" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="46" click="0" class="cell" onclick="usrPress(this)"></td>
+        </tr>
+        <tr>
+          <td id="51" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="52" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="53" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="54" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="55" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="56" click="0" class="cell" onclick="usrPress(this)"></td>
+        </tr>
+        <tr>
+          <td id="61" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="62" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="63" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="64" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="65" click="0" class="cell" onclick="usrPress(this)"></td>
+          <td id="66" click="0" class="cell" onclick="usrPress(this)"></td>
+        </tr>
+      </table>
+      <!-- Game Over or Game Win Status -->
+      <div class="gamestatus gamestatus_hidden" id="gameStatus">
+        <p id="statusTitle"></p>
+        <button onclick="gameRetry()">retry</button>
+      </div>
+
+      <!-- Game Start Menu -->
+      <div class="gamestart gamestatus_show" id="gameStart">
+        <p>Mindsweeper</p>
+        <button onclick="start()">start</button>
+      </div>
     </div>
 
-    <div class="body">
-        <table class="tb">
-            <tr>
-                <td class="cell" id="11" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="12" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="13" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="14" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="15" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="16" click=0 onclick="userPress(this)"></td>
-            </tr>
-            <tr>
-                <td class="cell" id="21" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="22" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="23" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="24" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="25" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="26" click=0 onclick="userPress(this)"></td>
-            </tr>
-            <tr>
-                <td class="cell" id="31" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="32" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="33" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="34" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="35" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="36" click=0 onclick="userPress(this)"></td>
-            </tr>
-            <tr>
-                <td class="cell" id="41" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="42" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="43" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="44" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="45" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="46" click=0 onclick="userPress(this)"></td>
-            </tr>
-            <tr>
-                <td class="cell" id="51" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="52" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="53" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="54" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="55" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="56" click=0 onclick="userPress(this)"></td>
-            </tr>
-            <tr>
-                <td class="cell" id="61" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="62" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="63" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="64" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="65" click=0 onclick="userPress(this)"></td>
-                <td class="cell" id="66" click=0 onclick="userPress(this)"></td>
-            </tr>
-        </table>
-    </div>
-
+    <audio id="clickSong" src="assets/audio/click.mp3"></audio>
+    <audio id="gameoverSong" src="assets/audio/gameover.mp3"></audio>
+    <audio id="gamewinSong" src="assets/audio/gamewin.mp3"></audio>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
