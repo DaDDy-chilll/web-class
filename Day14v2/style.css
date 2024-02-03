@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap&family=Fjalla+One&display=swap');
 *{
     box-sizing: border-box;
 }
@@ -13,6 +14,7 @@ body{
 .container {
     width: 600px;
     height: 600px;
+    position: relative;
 }
 
 .container table{
@@ -35,9 +37,50 @@ table td{
 }
 
 .boom{
-    height: 90%;
+    height: 80%;
     filter: drop-shadow(3px 4px 2px  rgb(0 0 0 / 0.4));
-    /* background-color: red; */
+}
+
+
+td:active{
+   transform: scale(.9);
+}
+
+.gamestatus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2e332eed;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all .2s;
+}
+
+.gamestatus p{
+    font-family: 'Honk', system-ui;
+    font-size: 5rem;
+}
+
+.gamestatus button{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+    padding: 1% 5%;
+    border-radius: 5px;
+    border: none;
+    background-color: lightblue;
+    color: white;
+    cursor: pointer;
+    transition: all .2s;
+}
+.gamestatus button:hover{
+    background-color: darkblue;
 }
 
 .hidden{
@@ -45,10 +88,13 @@ table td{
 }
 
 .show{
-    display: block;
+    display: flex;
+
 }
 
-td:active{
-   transform: scale(.9);
+.gamestatus_show{
+    transform: scale(1);
 }
-
+.gamestatus_hidden{
+    transform: scale(0);
+}

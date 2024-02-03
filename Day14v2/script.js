@@ -1,6 +1,9 @@
 var clickSong = document.getElementById('clickSong')
 var gameoverSong = document.getElementById('gameoverSong')
 var gamewinSong = document.getElementById('gamewinSong')
+var gameStatus = document.getElementById('gameStatus')
+var statusTitle = document.getElementById('statusTitle')
+
 var boom, p1, p2, p3, p4, p5, p6, p7, p8;
 var isOver = false;
 var isWin = false;
@@ -64,11 +67,29 @@ function gameOver () {
     for (let i = 0; i < 36; i++) document.getElementsByClassName('cell')[i].style.background="#ff1c1c";
     isOver=true
     gameoverSong.play()
+    gameStatus.setAttribute('class','gamestatus gamestatus_show');
+  statusTitle.innerText = 'game over'
 }
 
 function gameWin() {
     if(clicked == 35){
       gamewinSong.play();
       isWin=true;
+  gameStatus.setAttribute('class','gamestatus gamestatus_show');
+  statusTitle.innerText = 'game win'
     }else return;
+}
+
+function gameRetry () {
+  gameStatus.setAttribute('class','gamestatus gamestatus_hidden');
+  boomImg.setAttribute("class", "boom hidden");
+ isOver = false;
+ isWin = false;
+ clicked = 0;
+ for (let i = 0; i < 36; i++) {
+  var cell = document.getElementsByClassName('cell')[i]
+  cell.style.background="white"
+  cell.setAttribute('click',0)
+ };
+  gameStart();
 }
