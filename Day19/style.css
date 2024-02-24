@@ -9,10 +9,12 @@ body {
     overflow: hidden;
 }
 
+/* all input radio */
 input[type="radio"] {
     appearance: none;
 }
 
+/* Maing Container */
 .main {
     width: 100%;
     height: 100vh;
@@ -23,6 +25,7 @@ input[type="radio"] {
     flex-direction: column;
 }
 
+/* Title */
 .header {
     display: flex;
     justify-content: center;
@@ -74,13 +77,12 @@ input[type="radio"] {
     }
 }
 
+/* Watch Container*/
 .watches {
     width: 300px;
     height: 300px;
     position: relative;
 }   
-
-
 
 .watches::after {
     content: '';
@@ -92,6 +94,7 @@ input[type="radio"] {
     left: 0;
 }
 
+/* Case Container and Strap Container*/
 .case_container,
 .strap_container {
     width: 100%;
@@ -106,6 +109,14 @@ input[type="radio"] {
     animation: watchesAni 1.5s infinite alternate-reverse;
     
 }
+
+.case_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
 @keyframes watchesAni {
     from{
         transform: translateY(0);
@@ -115,12 +126,7 @@ input[type="radio"] {
     }
 }
 
-.case_container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-}
+
 
 .watch_case_container,
 .watch_strap_container {
