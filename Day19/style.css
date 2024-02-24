@@ -10,13 +10,13 @@ body{
 }
 
 #watch{
-    /* width: 100px; */
-    /* height: 100px; */
+    width: 100px; 
+    height: 100px;
     /* background-repeat: no-repeat;
     background-size: cover; */
     /* background-color: red; */
     /* transition: all .2s; */
-
+    background-color: red;
 }
 
 label{
@@ -27,12 +27,14 @@ input{
     /* appearance: none; */
 }
 
-#case1:checked #watch{
-    background:url('assets/cases/case1.png') no-repeat;
+#case1:active #watch{
+    /* background:url('assets/cases/case1.png') no-repeat; */
+    background-color: green;
 
 }
 
 #case2:checked #watch{
-    background:url('assets/cases/case2.png') no-repeat;
+    /* background:url('assets/cases/case2.png') no-repeat; */
+    background-color: blue;
 
 }
