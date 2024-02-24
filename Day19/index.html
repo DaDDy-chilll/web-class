@@ -1,31 +1,77 @@
 <!DOCTYPE html>
-<html>
-<head>
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apple Watch</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav></nav>
-    <h1>apple watch</h1>
-    <div class="container">
-        <div  id="watch">
-            <!-- <img src="assets/cases/case1.png" alt="" width="10%" > -->
-        </div>
-        <div class="watch_style">
-            <div class="case_container">
-                <label for="case1">
-                    <img src="assets/cases/case1.png" alt="" width="10%">
-                </label>
-                <input type="radio" name="case" id="case1" >
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- This is Case input radio with link id -->
+    <input type="radio" id="case1" name="case" checked />
+    <input type="radio" id="case2" name="case" />
+    <input type="radio" id="case4" name="case" />
+    <input type="radio" id="case3" name="case" />
+    <input type="radio" id="case5" name="case" />
 
-                <label for="case2">
-                    <img src="assets/cases/case2.png" alt="" width="10%">
-                </label>
-                <input type="radio" name="case" id="case2">
-            </div>
-            <div class="straps_container"></div>
+    <input type="radio" id="strap1" name="strap" checked />
+    <input type="radio" id="strap2" name="strap" />
+    <input type="radio" id="strap3" name="strap" />
+    <input type="radio" id="strap4" name="strap" />
+    <input type="radio" id="strap5" name="strap" />
+
+    <div class="main">
+      <h1>apple watch</h1>
+
+      <div class="watches">
+        <div class="container">
+            <div class="case_container"></div>
+            <div class="strap_container"></div>
         </div>
+        
+
+        <div class="watch_case">
+            <label for="case1">
+                <img src="assets/cases/case1.png" alt="" width="10%" />
+              </label>
+              <label for="case2">
+                <img src="assets/cases/case2.png" alt="" width="10%" />
+              </label>
+              <label for="case3">
+                <img src="assets/cases/case3.png" alt="" width="10%" />
+              </label>
+      
+              <label for="case4">
+                <img src="assets/cases/case4.png" alt="" width="10%" />
+              </label>
+      
+              <label for="case5">
+                <img src="assets/cases/case5.png" alt="" width="10%" />
+              </label>
+      
+        </div>
+
+        <div class="watch_strap">
+            <label for="strap1">
+                <img src="assets/straps/strap1.png" alt="" width="10%" />
+              </label>
+              <label for="strap2">
+                <img src="assets/straps/strap2.png" alt="" width="10%" />
+              </label>
+              <label for="strap3">
+                <img src="assets/straps/strap3.png" alt="" width="10%" />
+              </label>
+      
+              <label for="strap4">
+                <img src="assets/straps/strap4.png" alt="" width="10%" />
+              </label>
+      
+              <label for="strap5">
+                <img src="assets/straps/strap5.png" alt="" width="10%" />
+              </label>
+      
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

@@ -1,40 +1,89 @@
-:root{
-    --img1:url('assets/cases/case1.png');
-    --img2:url('assets/cases/case2.png');
-}
-*{
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0;
 }
 
-#watch{
-    width: 100px; 
-    height: 100px;
-    /* background-repeat: no-repeat;
-    background-size: cover; */
-    /* background-color: red; */
-    /* transition: all .2s; */
-    background-color: red;
+.container {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ccc;
+    position: relative;
 }
 
-label{
-    background-color: red;
-
-}
-input{
-    /* appearance: none; */
-}
-
-#case1:active #watch{
-    /* background:url('assets/cases/case1.png') no-repeat; */
-    background-color: green;
-
+.case_container,.strap_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 0.3s ease-in-out;
 }
 
-#case2:checked #watch{
-    /* background:url('assets/cases/case2.png') no-repeat; */
-    background-color: blue;
+.case_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
 
+
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+
+#case1:checked~.main .case_container {
+    background-image: url('assets/cases/case1.png');
+}
+
+#case2:checked~.main .case_container {
+    background-image: url('assets/cases/case2.png');
+}
+
+#case3:checked~.main .case_container {
+    background-image: url('assets/cases/case3.png');
+}
+
+#case4:checked~.main .case_container {
+    background-image: url('assets/cases/case4.png');
+}
+
+#case5:checked~.main .case_container {
+    background-image: url('assets/cases/case5.png');
+}
+
+
+/* -- */
+
+#strap1:checked~.main .strap_container{
+    background-image: url('assets/straps/strap1.png');
+}
+
+#strap2:checked~.main .strap_container{
+    background-image: url('assets/straps/strap2.png');
+}
+
+#strap3:checked~.main .strap_container {
+    background-image: url('assets/straps/strap3.png');
+}
+
+#strap4:checked~.main .strap_container {
+    background-image: url('assets/straps/strap4.png');
+}
+
+#strap5:checked~.main .strap_container {
+    background-image: url('assets/straps/strap5.png');
 }
