@@ -16,6 +16,12 @@ input[type="radio"] {
     appearance: none;
 }
 
+nav{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
 /* Maing Container */
 .main {
     width: 100%;
@@ -32,6 +38,7 @@ input[type="radio"] {
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 .header h1 {
@@ -42,7 +49,6 @@ input[type="radio"] {
     font-weight: bolder;
     text-align: center;
     position: relative;
-    width: 0;
     text-wrap: nowrap;
     overflow: hidden;
     animation: textani 3s forwards steps(15) 1s;
