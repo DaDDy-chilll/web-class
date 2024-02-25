@@ -14,11 +14,11 @@ body {
     transition: background-color .2s ease-out;
 }
 
-body[them='dark']{
+body[theme='dark']{
     background-color: var(--dark);
 }
 
-body[them='bright']{
+body[theme='bright']{
     background-color: var(--bright);
 }
 
@@ -227,22 +227,8 @@ label:active {
     background-color: rgba(7, 43, 250, 0.61);
 }
 
-.case_info,.strap_info{
+.theme{
     position: absolute;
-}
-
-.case_info{
-    left: 17%;
-    top: 23%;
-    width: 23%;
-    height: 16%;
-    background-color: #66666666;
-}
-
-.strap_info{
-    right: 17%;
-    top: 23%;
-    width: 23%;
-    height: 16%;
-    background-color: #66666666;
+    top: 0;
+    right: 0;
 }
