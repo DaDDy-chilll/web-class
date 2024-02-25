@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
 
+:root{
+    --dark:#272727;
+    --bright:#ebebeb
+}
 * {
     box-sizing: border-box;
 }
@@ -7,6 +11,15 @@
 body {
     margin: 0;
     overflow: hidden;
+    transition: background-color .2s ease-out;
+}
+
+body[them='dark']{
+    background-color: var(--dark);
+}
+
+body[them='bright']{
+    background-color: var(--bright);
 }
 
 /* all input radio */
@@ -212,4 +225,24 @@ label:active {
 #strap4:checked~.main #strap_four,
 #strap5:checked~.main #strap_five {
     background-color: rgba(7, 43, 250, 0.61);
+}
+
+.case_info,.strap_info{
+    position: absolute;
+}
+
+.case_info{
+    left: 17%;
+    top: 23%;
+    width: 23%;
+    height: 16%;
+    background-color: #66666666;
+}
+
+.strap_info{
+    right: 17%;
+    top: 23%;
+    width: 23%;
+    height: 16%;
+    background-color: #66666666;
 }
