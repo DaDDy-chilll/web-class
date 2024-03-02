@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
 
-:root{
-    --dark:#272727;
-    --bright:#ebebeb
-}
 * {
     box-sizing: border-box;
 }
@@ -14,17 +10,16 @@ body {
     transition: background-color .2s ease-out;
 }
 
-body[theme='dark']{
-    background-color: var(--dark);
-}
-
-body[theme='bright']{
-    background-color: var(--bright);
-}
 
 /* all input radio */
 input[type="radio"] {
     appearance: none;
+}
+
+nav{
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 /* Maing Container */
@@ -43,6 +38,7 @@ input[type="radio"] {
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 .header h1 {
@@ -53,7 +49,6 @@ input[type="radio"] {
     font-weight: bolder;
     text-align: center;
     position: relative;
-    width: 0;
     text-wrap: nowrap;
     overflow: hidden;
     animation: textani 3s forwards steps(15) 1s;
@@ -140,7 +135,6 @@ input[type="radio"] {
 }
 
 
-
 .watch_case_container,
 .watch_strap_container {
     text-align: center;
@@ -172,6 +166,7 @@ label:active {
     transform: scale(0.9);
 }
 
+/* case */
 #case1:checked~.main .case_container {
     background-image: url('assets/cases/case1.png');
 }
@@ -192,7 +187,7 @@ label:active {
     background-image: url('assets/cases/case5.png');
 }
 
-/* -- */
+/* strap */
 
 #strap1:checked~.main .strap_container {
     background-image: url('assets/straps/strap1.png');
@@ -214,6 +209,7 @@ label:active {
     background-image: url('assets/straps/strap5.png');
 }
 
+/* Active color */
 #case1:checked~.main #case_one,
 #case2:checked~.main #case_two,
 #case3:checked~.main #case_three,
@@ -227,8 +223,3 @@ label:active {
     background-color: rgba(7, 43, 250, 0.61);
 }
 
-.theme{
-    position: absolute;
-    top: 0;
-    right: 0;
-}
