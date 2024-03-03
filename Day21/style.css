@@ -1,168 +1,356 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
-body{
+body {
     box-sizing: border-box;
     background-color: black;
 }
 
-nav{
+/* Navigation */
+nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background-color: black;
     color: white;
     padding: .5%;
-    box-shadow: 0 5px 10px white;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.441);
     z-index: 10;
+    position: relative;
 }
 
-nav .logo{
+nav .logo {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-nav ul{
+nav ul {
     width: 43%;
 }
 
-
-nav ul li{
+nav ul li {
     display: inline;
     margin-right: 2%;
     text-transform: capitalize;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-nav .menu{
+nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 10%;
+    background-color: red;
+    transition: all .3s;
+}
+
+ul li:hover::after {
+    width: 100%
+}
+
+nav .menu {
     display: none;
 }
 
-nav .cart{
+nav .cart {
     font-size: 1.5rem;
 }
 
-.home{
+/* Home */
+.home {
     background-color: black;
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
     padding: 2%;
 }
 
-.home .home_content{
-    color: white;
-
+.home img {
+    width: 30%;
 }
-.home_content h1{
+
+.home .home_content {
+    color: white;
+}
+
+.home_content h1 {
     text-transform: capitalize;
 }
-.home_content .description{
+
+.home_content .description {
     color: gray;
     margin: 1% 0;
 }
 
-.home_content .price{
+.home_content .price {
     font-size: 1.5rem;
     margin: 1% 0;
 }
 
-.home_content button{
+.home_content button {
     background-color: rgb(59, 180, 255);
     color: white;
     text-transform: capitalize;
-    padding: .5% 1%;
+    padding: .5% 2%;
     border: none;
     border-radius: 5px;
 }
 
+/* Banner */
 
-.banner{
+.banner {
     position: relative;
 }
 
-.banner p{
+.banner p {
     position: absolute;
     top: 30%;
     left: 10%;
     text-align: center;
     text-transform: capitalize;
-
-
 }
 
-.products{
+/* Products */
+.products {
     text-align: center;
-    padding: 1%;
+    padding: 2% 1%;
     color: white;
 }
 
-.products h1{
+.products h1 {
     text-transform: capitalize;
     font-size: 2rem;
+    position: relative;
 }
 
-.products .description{
+.products h1::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 25%;
+    align-self: center;
+    width: 50%;
+    height: 6%;
+    background-color: gray;
+}
+
+.products .description {
     margin: 1% 0;
 }
 
-.products label{
+.products label {
     text-transform: capitalize;
     font-size: 1.2rem;
     margin: 0 1%;
     user-select: none;
 }
 
-.products .watch_container{
+/* Watch Container */
+.products .watch_container {
     display: flex;
-   justify-content: center;
-   align-items: center;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-.watch_container .watch{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   width: 15%; 
+.watch_container .watch {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 15%;
     height: 300px;
     margin: 2%;
 }
 
-.watch p:nth-child(2){
+.watch p:nth-child(2) {
     text-transform: capitalize;
     margin: 5%;
 }
 
-footer{
+#series8:checked~.watch_container #watch8 {
+    display: flex;
+}
+
+#series7:checked~.watch_container #watch7 {
+    display: flex;
+}
+
+/* Footer */
+footer {
     color: white;
     text-align: center;
     padding: 2%;
+    box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.441);
 }
 
-footer .brand{
+footer .brand {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
 }
 
-footer .description{
+footer .brand .fa-apple {
+    color: rgb(59, 180, 255);
+}
+
+footer .brand p {
+    margin-left: 2%;
+}
+
+footer .description {
     margin: 1% 0;
 }
 
-footer .social{
+footer .social {
     font-size: 2rem;
     margin: 2% 0;
+    color: rgb(59, 180, 255);
+
 }
 
-footer .fa-twitter{
+footer .fa-twitter {
     margin: 0 2%;
 }
 
-footer .copyright{
+footer .copyright {
     font-size: 1rem;
+}
+
+@media screen and (max-width:760px) {
+    nav .menu {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        margin-right: 10px;
+    }
+
+    nav .cart {
+        display: none;
+    }
+
+    nav ul {
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: black;
+        padding: 1%;
+    }
+
+    ul li {
+        padding: 2% 0;
+        cursor: pointer;
+    }
+
+    nav ul li::after {
+        height: 5%;
+    }
+
+    ul li:hover {
+        color: gray;
+    }
+
+    #menubtn:checked~ul {
+        display: flex;
+    }
+
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home img {
+        width: 50%;
+    }
+
+    .home .home_content {
+        text-align: start;
+        margin-top: 2%;
+        padding: 2% 10%;
+    }
+
+    .home_content h1 {
+        font-size: 1.3rem;
+    }
+
+    .home_content .description {
+        font-size: .8rem;
+    }
+
+    .home_content .price {
+        font-size: 1.3rem;
+        margin: 5% 0;
+    }
+
+    .home_content button {
+        font-size: .9rem;
+        padding: 1% 2%;
+    }
+
+    .banner p {
+        font-size: .8rem;
+        left: 7%;
+    }
+
+    .products h1 {
+        font-size: 1.5rem;
+    }
+
+    .products .description {
+        font-size: .8rem;
+        padding: 1% 3%;
+    }
+
+
+    .products label {
+        font-size: 1rem;
+    }
+
+    .products .watch_container {
+        padding: 3% 10%;
+    }
+
+    .watch_container .watch {
+        width: 50%;
+    }
+
+    footer {
+        padding: 5%;
+    }
+
+    footer .brand {
+        font-size: 1.2rem;
+    }
+
+    footer .description {
+        font-size: .7rem;
+    }
+
+    footer .social {
+        font-size: 1.5rem;
+        margin-bottom: 5%;
+    }
+
+    footer .fa-twitter {
+        margin: 0 10%;
+    }
+
+    footer .copyright {
+        font-size: .8rem;
+    }
 }

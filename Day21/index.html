@@ -11,8 +11,16 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body>
+    <!-- Navigation -->
     <nav>
+      <input
+        type="checkbox"
+        name="menubtn"
+        id="menubtn"
+        style="display: none"
+      />
       <div class="logo">
         <img
           src="assets/apple-watch-icon.png"
@@ -27,13 +35,14 @@
         <li>about us</li>
       </ul>
       <div>
-        <i class="fa-solid fa-bars menu"></i>
+        <label for="menubtn"><i class="fa-solid fa-bars menu"></i></label>
         <i class="fa-solid fa-cart-shopping cart"></i>
       </div>
     </nav>
 
+    <!-- Home -->
     <section class="home">
-      <img src="assets/watch.jpg" alt="banner" width="30%" draggable="false" />
+      <img src="assets/watch.jpg" alt="banner" draggable="false" />
       <div class="home_content">
         <h1>apple watch series 8</h1>
         <p class="description">
@@ -47,6 +56,7 @@
       </div>
     </section>
 
+    <!-- Banner -->
     <section class="banner">
       <img src="assets/banner.jpeg" alt="banner" width="100%" />
       <p>
@@ -55,6 +65,7 @@
       </p>
     </section>
 
+    <!-- Product -->
     <section class="products">
       <h1>our products</h1>
       <p class="description">
@@ -68,53 +79,64 @@
         <input type="checkbox" name="series7" id="series7" checked />
         <label for="series8">series 8</label>
         <input type="checkbox" name="series8" id="series8" checked />
+
         <div class="watch_container">
-          <div id="series7" class="watch">
+          <div id="watch8" class="watch">
             <img src="assets/watch1.png" alt="watch" width="100%" />
-              <p>apple watch series 7</p>
-              <p>$ 299</p>
+            <p>apple watch series 8</p>
+            <p>$ 299</p>
           </div>
-          <div id="series7" class="watch">
+
+          <div id="watch7" class="watch">
+            <img src="assets/watch7.png" alt="watch" width="100%" />
+            <p>apple watch series 7</p>
+            <p>$ 299</p>
+          </div>
+
+          <div id="watch8" class="watch">
             <img src="assets/watch1.png" alt="watch" width="100%" />
-              <p>apple watch series 7</p>
-              <p>$ 299</p>
+            <p>apple watch series 8</p>
+            <p>$ 299</p>
           </div>
-          <div id="series7" class="watch">
+
+          <div id="watch7" class="watch">
+            <img src="assets/watch7.png" alt="watch" width="100%" />
+            <p>apple watch series 7</p>
+            <p>$ 299</p>
+          </div>
+
+          <div id="watch7" class="watch">
+            <img src="assets/watch7.png" alt="watch" width="100%" />
+            <p>apple watch series 7</p>
+            <p>$ 299</p>
+          </div>
+
+          <div id="watch8" class="watch">
             <img src="assets/watch1.png" alt="watch" width="100%" />
-              <p>apple watch series 7</p>
-              <p>$ 299</p>
-          </div>
-          <div id="series8" class="watch">
-            <img src="assets/watch7.png" alt="watch" width="100%" />
-              <p>apple watch series 7</p>
-              <p>$ 299</p>
-          </div>
-          <div id="series8" class="watch">
-            <img src="assets/watch7.png" alt="watch" width="100%" />
-              <p>apple watch series 7</p>
-              <p>$ 299</p>
-          </div>
-          <div id="series8" class="watch">
-            <img src="assets/watch7.png" alt="watch" width="100%" />
-              <p>apple watch series 7</p>
-              <p>$ 299</p>
-            </div>
+            <p>apple watch series 8</p>
+            <p>$ 299</p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
     <footer>
-        <div class="brand">
-            <i class="fa-brands fa-apple"></i>
-            <p>Apple</p>
-        </div>
-        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolores aliquid illum rem architecto, tempora repudiandae doloremque porro aut fuga?</p>
-        <div class="social">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-youtube"></i>
-        </div>
-        <p class="copyright">2022 Copyright &#169; Apple</p>
+      <div class="brand">
+        <i class="fa-brands fa-apple"></i>
+        <p>Apple</p>
+      </div>
+      <p class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolores
+        aliquid illum rem architecto, tempora repudiandae doloremque porro aut
+        fuga?
+      </p>
+      <div class="social">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+      <p class="copyright">2022 Copyright &#169; Apple</p>
     </footer>
   </body>
 </html>
