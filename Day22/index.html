@@ -5,82 +5,87 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <input type="checkbox" style="display: none;" id="cap">
     <div class="container">
-        <div class="result"></div>
-        <div class="display"></div>
+        <pre class="display" id="display"></pre>
+        <input type="text" class="result" id="text"></input>
 
         <div class="methods">
-            <div>charAt()</div>
-            <div>charCodeAt()</div>
-            <div>toUpperCase()</div>
-            <div>toLowerCase()</div>
-            <div>trim()</div>
-            <div>includes()</div>
-            <div>indexOf()</div>
-            <div>lastIndexof()</div>
-            <div>startWidth()</div>
-            <div>endsWidth()</div>
+            <div id="methods">charAt()</div>
+            <div id="methods">charCodeAt()</div>
+            <div id="methods">toUpperCase()</div>
+            <div id="methods">toLowerCase()</div>
+            <div id="methods">trim()</div>
+            <div id="methods">includes()</div>
+            <div id="methods">indexOf()</div>
+            <div id="methods">lastIndexof()</div>
+            <div id="methods">startsWith()</div>
+            <div id="methods">endsWith()</div>
         </div>
 
         <div class="keyboard">
             <div class="line1">
-                <div class="esc">esc</div>
-                <div class="key">1</div>
-                <div class="key">2</div>
-                <div class="key">3</div>
-                <div class="key">4</div>
-                <div class="key">5</div>
-                <div class="key">6</div>
-                <div class="key">7</div>
-                <div class="key">8</div>
-                <div class="key">9</div>
-                <div class="key">0</div>
-                <div class="backspace"><img src="assets/backspace.svg" alt="backspace"></div>
+                <div class="esc" id="esc">esc</div>
+                <div class="key" id="key">1</div>
+                <div class="key" id="key">2</div>
+                <div class="key" id="key">3</div>
+                <div class="key" id="key">4</div>
+                <div class="key" id="key">5</div>
+                <div class="key" id="key">6</div>
+                <div class="key" id="key">7</div>
+                <div class="key" id="key">8</div>
+                <div class="key" id="key">9</div>
+                <div class="key" id="key">0</div>
+                <div class="backspace" id="backspace"><img src="assets/backspace.svg" alt="backspace"  draggable="false"></div>
             </div>
 
             <div class="line2">
-                <div class="tab"><img src="assets/tab.svg" alt="tab"></div>
-                <div class="key">q</div>
-                <div class="key">w</div>
-                <div class="key">e</div>
-                <div class="key">r</div>
-                <div class="key">t</div>
-                <div class="key">y</div>
-                <div class="key">u</div>
-                <div class="key">i</div>
-                <div class="key">o</div>
-                <div class="key">p</div>
-                <div class="tab"><img src="assets/tab.svg" alt="tab"></div>
+                <div class="tab" id="tab"><img src="assets/tab.svg" alt="tab" draggable="false"></div>
+                <div class="key" id="key">q</div>
+                <div class="key" id="key">w</div>
+                <div class="key" id="key">e</div>
+                <div class="key" id="key">r</div>
+                <div class="key" id="key">t</div>
+                <div class="key" id="key">y</div>
+                <div class="key" id="key">u</div>
+                <div class="key" id="key">i</div>
+                <div class="key" id="key">o</div>
+                <div class="key" id="key">p</div>
+                <div class="tab" id="tab"><img src="assets/tab.svg" alt="tab" draggable="false"></div>
             </div>
 
             <div class="line3">
-                <div class="caplock"><img src="assets/capslock.svg" alt="capslock"></div>
-                <div class="key">a</div>
-                <div class="key">s</div>
-                <div class="key">d</div>
-                <div class="key">f</div>
-                <div class="key">g</div>
-                <div class="key">h</div>
-                <div class="key">j</div>
-                <div class="key">k</div>
-                <div class="key">l</div>
-                <div class="caplock"><img src="assets/capslock.svg" alt="capslock"></div>
+                <label for="cap" class="caplock" id="caplock"><img src="assets/capslock.svg" alt="capslock"  draggable="false"></label>
+                <div class="key" id="key">a</div>
+                <div class="key" id="key">s</div>
+                <div class="key" id="key">d</div>
+                <div class="key" id="key">f</div>
+                <div class="key" id="key">g</div>
+                <div class="key" id="key">h</div>
+                <div class="key" id="key">j</div>
+                <div class="key" id="key">k</div>
+                <div class="key" id="key">l</div>
+                <div class="caplock" id="caplock"><img src="assets/capslock.svg" alt="capslock"  draggable="false"></div>
             </div>
 
             <div class="line4">
-                <div class="enter"><img src="assets/enter.svg" alt="enter"></div>
-                <div class="key">z</div>
-                <div class="key">x</div>
-                <div class="key">c</div>
-                <div class="key">v</div>
-                <div class="key">b</div>
-                <div class="key">n</div>
-                <div class="key">m</div>
-                <div class="enter"><img src="assets/enter.svg" alt="enter"></div>
+                <div class="enter" id="enter"><img src="assets/enter.svg" alt="enter"  draggable="false"></div>
+                <div class="key" id="key">z</div>
+                <div class="key" id="key">x</div>
+                <div class="key" id="key">c</div>
+                <div class="key" id="key">v</div>
+                <div class="key" id="key">b</div>
+                <div class="key" id="key">n</div>
+                <div class="key" id="key">m</div>
+                <div class="enter" id="enter"><img src="assets/enter.svg" alt="enter"  draggable="false"></div>
             </div>
 
-            <div class="space"><img src="assets/space.svg" alt="space"></div>
+            <div class="space" id="space"><img src="assets/space.svg" alt="space"  draggable="false"></div>
         </div>
+
+        <div class="alert">Press any key to start typing.</div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
