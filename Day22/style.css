@@ -1,8 +1,11 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     box-sizing: border-box;
     width: 100%;
     height: 100vh;
@@ -11,20 +14,33 @@ body{
     align-items: center;
 }
 
-.container{
+.container {
     width: 70%;
-    height: 90vh;
-    background-color: red;
+    height: 80vh;
     padding: 2%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid lightgreen;
+    border-radius: 10px;
 }
 
-.container .display{
+.container .result{
+    width: 60%;
+    height: 50px;
+    background-color: lightslategray;
+}
+
+.container .display {
     width: 100%;
-    height: 80px;
+    height: 60px;
     background-color: gray;
+    margin-top: 1%;
 }
 
-.container .methods{
+.container .methods {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -32,20 +48,87 @@ body{
     margin-top: 2%;
 }
 
-.methods div{
-    background-color:blue;
+.methods div {
+    color: white;
+    background-color: rgb(94, 94, 255);
     padding: 1%;
+    border-radius: 5px;
+    margin: 1% 0;
+    transition: all .2s;
 }
 
-.keyboard{
+.methods div:hover{
+    background-color: rgb(140, 140, 255);
+    color: rgb(36, 36, 255);
+    user-select: none;
+    cursor: pointer;
+}
+
+.keyboard {
     width: 100%;
 }
 
-.line1,.line2,.line3,.line4{
+.line1,
+.line2,
+.line3,
+.line4 {
     display: flex;
+    justify-content: space-between;
+    margin: 1.5% 0;
 }
 
-.keyboard .esc{
-    height: 30px;
-    background-color:green;
+.keyboard .esc,
+.key,
+.backspace,
+.tab,
+.caplock,
+.enter,
+.space {
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 -5px 4px #dcdcdc77, 0 8px 4px 4px #0000005b;
+    font-family: "Poppins", sans-serif;
+}
+
+.keyboard .esc {
+    width: 50px;
+    text-transform: uppercase;
+    background-color: #ff3131;
+    color: white;
+}
+
+
+
+.keyboard .key {
+    width: 50px;
+}
+
+.keyboard .backspace {
+    width: 100px;
+    background-color: #FFF170;
+}
+
+.keyboard .tab {
+    width: 80px;
+    background-color: #76FF94;
+}
+
+.keyboard .caplock {
+    width: 120px;
+    background-color: #58F5FF;
+}
+
+.keyboard .enter {
+    width: 150px;
+    background-color: #853AFF;
+}
+
+.keyboard .space {
+    width: 100%;
+    background-color: #3F5DFF;
 }
