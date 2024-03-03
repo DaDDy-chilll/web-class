@@ -1,91 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>String Methods</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <input type="checkbox" style="display: none;" id="cap">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <input type="checkbox" style="display: none" id="cap" />
     <div class="container">
-        <pre class="display" id="display"></pre>
-        <input type="text" class="result" id="text"></input>
+      <pre class="display" id="display"></pre>
+      <input type="text" class="result" id="text" />
 
-        <div class="methods">
-            <div id="methods">charAt()</div>
-            <div id="methods">charCodeAt()</div>
-            <div id="methods">toUpperCase()</div>
-            <div id="methods">toLowerCase()</div>
-            <div id="methods">trim()</div>
-            <div id="methods">includes()</div>
-            <div id="methods">indexOf()</div>
-            <div id="methods">lastIndexof()</div>
-            <div id="methods">startsWith()</div>
-            <div id="methods">endsWith()</div>
+      <!-- String Methods -->
+      <div class="methods">
+        <div id="methods">charAt()</div>
+        <div id="methods">charCodeAt()</div>
+        <div id="methods">toUpperCase()</div>
+        <div id="methods">toLowerCase()</div>
+        <div id="methods">trim()</div>
+        <div id="methods">includes()</div>
+        <div id="methods">indexOf()</div>
+        <div id="methods">lastIndexof()</div>
+        <div id="methods">startsWith()</div>
+        <div id="methods">endsWith()</div>
+      </div>
+
+      <!-- KeyBorad Layout -->
+      <div class="keyboard">
+
+        <!-- Line One -->
+        <div class="line1">
+          <div class="esc" id="esc">esc</div>
+          <div class="key" id="key">1</div>
+          <div class="key" id="key">2</div>
+          <div class="key" id="key">3</div>
+          <div class="key" id="key">4</div>
+          <div class="key" id="key">5</div>
+          <div class="key" id="key">6</div>
+          <div class="key" id="key">7</div>
+          <div class="key" id="key">8</div>
+          <div class="key" id="key">9</div>
+          <div class="key" id="key">0</div>
+          <div class="backspace" id="backspace">
+            <img src="assets/backspace.svg" alt="backspace" draggable="false" />
+          </div>
         </div>
 
-        <div class="keyboard">
-            <div class="line1">
-                <div class="esc" id="esc">esc</div>
-                <div class="key" id="key">1</div>
-                <div class="key" id="key">2</div>
-                <div class="key" id="key">3</div>
-                <div class="key" id="key">4</div>
-                <div class="key" id="key">5</div>
-                <div class="key" id="key">6</div>
-                <div class="key" id="key">7</div>
-                <div class="key" id="key">8</div>
-                <div class="key" id="key">9</div>
-                <div class="key" id="key">0</div>
-                <div class="backspace" id="backspace"><img src="assets/backspace.svg" alt="backspace"  draggable="false"></div>
-            </div>
-
-            <div class="line2">
-                <div class="tab" id="tab"><img src="assets/tab.svg" alt="tab" draggable="false"></div>
-                <div class="key" id="key">q</div>
-                <div class="key" id="key">w</div>
-                <div class="key" id="key">e</div>
-                <div class="key" id="key">r</div>
-                <div class="key" id="key">t</div>
-                <div class="key" id="key">y</div>
-                <div class="key" id="key">u</div>
-                <div class="key" id="key">i</div>
-                <div class="key" id="key">o</div>
-                <div class="key" id="key">p</div>
-                <div class="tab" id="tab"><img src="assets/tab.svg" alt="tab" draggable="false"></div>
-            </div>
-
-            <div class="line3">
-                <label for="cap" class="caplock" id="caplock"><img src="assets/capslock.svg" alt="capslock"  draggable="false"></label>
-                <div class="key" id="key">a</div>
-                <div class="key" id="key">s</div>
-                <div class="key" id="key">d</div>
-                <div class="key" id="key">f</div>
-                <div class="key" id="key">g</div>
-                <div class="key" id="key">h</div>
-                <div class="key" id="key">j</div>
-                <div class="key" id="key">k</div>
-                <div class="key" id="key">l</div>
-                <div class="caplock" id="caplock"><img src="assets/capslock.svg" alt="capslock"  draggable="false"></div>
-            </div>
-
-            <div class="line4">
-                <div class="enter" id="enter"><img src="assets/enter.svg" alt="enter"  draggable="false"></div>
-                <div class="key" id="key">z</div>
-                <div class="key" id="key">x</div>
-                <div class="key" id="key">c</div>
-                <div class="key" id="key">v</div>
-                <div class="key" id="key">b</div>
-                <div class="key" id="key">n</div>
-                <div class="key" id="key">m</div>
-                <div class="enter" id="enter"><img src="assets/enter.svg" alt="enter"  draggable="false"></div>
-            </div>
-
-            <div class="space" id="space"><img src="assets/space.svg" alt="space"  draggable="false"></div>
+        <!-- Line Two -->
+        <div class="line2">
+          <div class="tab" id="tab">
+            <img src="assets/tab.svg" alt="tab" draggable="false" />
+          </div>
+          <div class="key" id="key">q</div>
+          <div class="key" id="key">w</div>
+          <div class="key" id="key">e</div>
+          <div class="key" id="key">r</div>
+          <div class="key" id="key">t</div>
+          <div class="key" id="key">y</div>
+          <div class="key" id="key">u</div>
+          <div class="key" id="key">i</div>
+          <div class="key" id="key">o</div>
+          <div class="key" id="key">p</div>
+          <div class="tab" id="tab">
+            <img src="assets/tab.svg" alt="tab" draggable="false" />
+          </div>
         </div>
 
-        <div class="alert" id="alertStatus"><p id="alertText">hello world</p><span id="close">X</span></div>
+        <!-- Line Three -->
+        <div class="line3">
+          <label for="cap" class="caplock" id="caplock"
+            ><img src="assets/capslock.svg" alt="capslock" draggable="false"
+          /></label>
+          <div class="key" id="key">a</div>
+          <div class="key" id="key">s</div>
+          <div class="key" id="key">d</div>
+          <div class="key" id="key">f</div>
+          <div class="key" id="key">g</div>
+          <div class="key" id="key">h</div>
+          <div class="key" id="key">j</div>
+          <div class="key" id="key">k</div>
+          <div class="key" id="key">l</div>
+          <div class="caplock" id="caplock">
+            <img src="assets/capslock.svg" alt="capslock" draggable="false" />
+          </div>
+        </div>
+
+        <!-- Line Four -->
+        <div class="line4">
+          <div class="enter" id="enter">
+            <img src="assets/enter.svg" alt="enter" draggable="false" />
+          </div>
+          <div class="key" id="key">z</div>
+          <div class="key" id="key">x</div>
+          <div class="key" id="key">c</div>
+          <div class="key" id="key">v</div>
+          <div class="key" id="key">b</div>
+          <div class="key" id="key">n</div>
+          <div class="key" id="key">m</div>
+          <div class="enter" id="enter">
+            <img src="assets/enter.svg" alt="enter" draggable="false" />
+          </div>
+        </div>
+
+        <!-- Space Bar -->
+        <div class="space" id="space">
+          <img src="assets/space.svg" alt="space" draggable="false" />
+        </div>
+      </div>
+
+      <div class="alert" id="alertStatus">
+        <p id="alertText"></p>
+        <span id="close">X</span>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
