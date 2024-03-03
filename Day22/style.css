@@ -32,15 +32,33 @@ body {
 .container .alert{
     position: absolute;
     top: 0;
-    background-color: rgb(255, 167, 167);
+    background-color: rgb(167, 255, 180);
     width: 70%;
-    text-align: center;
     font-size: 1.5rem;
-    color: rgb(247, 11, 11);
+    color: rgb(0, 171, 68);
     padding: 1%;
     border-radius: 10px;
-    border: 1px solid rgb(247, 11, 11);
+    border: 1px solid rgb(50, 247, 11);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .2s;
     transform: translateY(-100px);
+}
+
+.alert span{
+    color: black;
+    background-color: gray;
+    padding: 1%;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s;
+
+}
+.alert span:hover{
+    background-color: lightgray;
+    color: black    ;
 }
 .container .result{
     width: 60%;
@@ -131,7 +149,18 @@ body {
     box-shadow: 0 -5px 4px #dcdcdc77, 0 8px 4px 4px #0000005b;
     font-family: "Poppins", sans-serif;
     cursor: pointer;
-    transition: all .2s;
+    transition: all .1s;
+}
+
+.keyboard .esc:active,
+.key:active,
+.backspace:active,
+.tab:active,
+.caplock:active,
+.enter:active,
+.space:active{
+    transform: translateY(5px);
+    box-shadow: 0 -3px 3px #dcdcdc77, 0 2px 2px 4px #0000005b;
 }
 
 .keyboard
