@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: black;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: .5%;
+    box-shadow: 0 5px 10px white;
+    z-index: 10;
+}
+
+nav .logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul{
+    width: 43%;
+}
+
+
+nav ul li{
+    display: inline;
+    margin-right: 2%;
+    text-transform: capitalize;
+}
+
+nav .menu{
+    display: none;
+}
+
+nav .cart{
+    font-size: 1.5rem;
+}
+
+.home{
+    background-color: black;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 2%;
+}
+
+.home .home_content{
+    color: white;
+
+}
+.home_content h1{
+    text-transform: capitalize;
+}
+.home_content .description{
+    color: gray;
+    margin: 1% 0;
+}
+
+.home_content .price{
+    font-size: 1.5rem;
+    margin: 1% 0;
+}
+
+.home_content button{
+    background-color: rgb(59, 180, 255);
+    color: white;
+    text-transform: capitalize;
+    padding: .5% 1%;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.banner{
+    position: relative;
+}
+
+.banner p{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    text-align: center;
+    text-transform: capitalize;
+
+
+}
+
+.products{
+    text-align: center;
+    padding: 1%;
+    color: white;
+}
+
+.products h1{
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.products .description{
+    margin: 1% 0;
+}
+
+.products label{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    margin: 0 1%;
+    user-select: none;
+}
+
+.products .watch_container{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    flex-wrap: wrap;
+}
+
+.watch_container .watch{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 15%; 
+    height: 300px;
+    margin: 2%;
+}
+
+.watch p:nth-child(2){
+    text-transform: capitalize;
+    margin: 5%;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    padding: 2%;
+}
+
+footer .brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+footer .description{
+    margin: 1% 0;
+}
+
+footer .social{
+    font-size: 2rem;
+    margin: 2% 0;
+}
+
+footer .fa-twitter{
+    margin: 0 2%;
+}
+
+footer .copyright{
+    font-size: 1rem;
+}
