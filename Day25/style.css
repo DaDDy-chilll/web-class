@@ -9,6 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
 }
 
 .container{
@@ -23,7 +24,7 @@ body{
     display: flex;
     /* justify-content: center; */
     align-items: center;
-    margin: 1% 0;
+    margin: 1.7% 0;
 
 }
 
@@ -31,6 +32,38 @@ body{
     width: 90px;
     height: 90px;
     border-radius: 100%;
-    background-color: red;
+    background-color: gray;
     margin: 0 1%;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.cell:hover{
+    transform: scale(1.1);
+}
+
+.player {
+    width: 20%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.player_life{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player_life img{
+    margin: 0 1%;
+}
+
+.active_p1{
+    background-color: black;
+}
+
+.active_p2{
+    background-color: red;
 }
