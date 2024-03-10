@@ -22,18 +22,21 @@ let currentPlayer = player1;
       const cellElement = document.createElement('div')
       cellElement.className='cell';
       cellElement.id=`${j},${i}`;
-      // cellElement.onclick="userClick(i)"
       rowElement.appendChild(cellElement);
-
     })
     container.appendChild(rowElement);
 
   })
-  cells = document.getElementsByClassName('cell')
+  cells = document.getElementsByClassName('cell');
+  userClick()
 })()
 
 
-fun
+function userClick () {
+  cells.forEach(cell => {
+    cell.addEventListener('click',console.log('hello'))
+  }) 
+}
 
 
 // (() => {
