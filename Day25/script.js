@@ -1,7 +1,6 @@
 const container = document.getElementById("container");
-const conatinerWidth = Math.floor(container.offsetWidth / 90);
-const containerHeight = Math.floor(container.offsetHeight / 90);
-let cells=[];
+const playerOne = document.getElementById("playerOne");
+const playerTwo = document.getElementById("playerTwo");
 let initialValue = [
   [0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0],
@@ -12,64 +11,76 @@ let initialValue = [
 const player1 = 1;
 const player2 = 2;
 let Finished = false;
+let winOrLoseOrDraw = 0;
 let currentPlayer = player1;
+let firstCell, secondCell,thirdCell,fourCell = null;
 
 (() => {
-  initialValue.forEach((row,j) => {
-    const rowElement = document.createElement('div')
-    rowElement.className='row';
-    row.forEach((cell,i) => {
-      const cellElement = document.createElement('div')
-      cellElement.className='cell';
-      cellElement.id=`${j},${i}`;
-      rowElement.appendChild(cellElement);
-    })
+  initialValue.forEach((row, j) => {
+    const rowElement = document.createElement("div");
+    rowElement.className = "row";
+    row.forEach((_, i) => {
+      const cellElement = `<div class='cell' id="${j},${i}" onclick="userClick(this)"></div>`;
+      rowElement.innerHTML += cellElement;
+    });
     container.appendChild(rowElement);
+  });
+  switchPlayer();
+})();
 
+function userClick(element) {
+  const [rowId, cellId] = element.id.split(",");
+  if (initialValue[rowId][cellId] !== 0) return;
+  if (currentPlayer === player1) {
+    initialValue[rowId][cellId] = player1;
+    element.classList.add("active_p1");
+    checkWin()
+    currentPlayer = player2;
+  } else {
+    initialValue[rowId][cellId] = player2;
+    element.classList.add("active_p2");
+    checkWin()
+    currentPlayer = player1;
+  }
+  switchPlayer();
+}
+
+function switchPlayer() {
+  if (currentPlayer === player1) {
+    playerTwo.removeAttribute('active')
+    playerOne.setAttribute('active','p1')
+  } else {
+    playerOne.removeAttribute('active')
+    playerTwo.setAttribute('active','p2')
+  }
+}
+
+function checkWin () {
+
+  initialValue.forEach(row => {
+    row.forEach((cell,i) => {
+      if(cell === currentPlayer){
+        checkWinState(i)
+      }
+    })
   })
-  cells = document.getElementsByClassName('cell');
-  userClick()
-})()
-
-
-function userClick () {
-  cells.forEach(cell => {
-    cell.addEventListener('click',console.log('hello'))
-  }) 
 }
 
 
-// (() => {
+function checkWinState(i) {
+console.log(firstCell);
+  if(firstCell === null){
+    firstCell = i
+  }else if(secondCell === null){
+    secondCell = i
+  }else if(thirdCell === null){
+    thirdCell = i
+  }else if(fourCell === null) {
+    fourCell = i
+  }else{
+    firstCell, secondCell,thirdCell,fourCell = null;
+  }
+  console.log(initialValue);
 
-//   for (let i = 0; i < containerHeight - 1; i++) {
-//     const row = document.createElement("div");
-//     row.className = "row";
-//     row.id = `row${i + 1}`;
-//     for (let j = 0; j < conatinerWidth - 1; j++) {
-//       const cell = `<div class='cell' id="${i + 1},${j + 1}" onclick='${userClick(this)}'></div>`
-//       const cell = document.createElement("div");
-//       cell.className = "cell";
-//       cell.setAttribute('data-cell',`${i + 1},${j + 1}`)
-//       cell.onclick = userClick(`${i + 1},${j + 1}`)
-//       cell.id='cell'
-//       row.append(cell);
-//     }
-//     container.appendChild(row);
-//   }
-//   allCells()
-  
-// })();
-
-// setupGame();
-
-
-function userClick (id){
-  console.log(id);
+  console.log(firstCell,secondCell,thirdCell,fourCell);
 }
-
-// function allCells () {
-// const cells = document.querySelectorAll('#cell');
-// cells.forEach(cell => {
-//   cell.addEventListener('click',userClick(cell.getAttribute('data-cell')))
-// })
-// }
