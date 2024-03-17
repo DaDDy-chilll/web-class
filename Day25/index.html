@@ -20,37 +20,31 @@
       </div>
 
       <div class="nav_center">
-        <i class="fa-solid fa-chevron-left"></i>
+        <span id="previousBtn" class="previousBtn"
+          ><i class="fa-solid fa-chevron-left"></i
+        ></span>
         <label class="cur_date" for="currInput" id="currBtn">
-          <p>March</p>
-          <p>2023</p>
+          <p id="showMonth"></p>
+          <p id="showYear"></p>
         </label>
         <input type="date" name="currDate" id="currInput" class="currInput" />
-        <i class="fa-solid fa-chevron-right"></i>
+        <span id="nextBtn" class="nextBtn"
+          ><i class="fa-solid fa-chevron-right"></i
+        ></span>
       </div>
 
       <div class="nav_option">
-        <div class="nav_btn active">Day</div>
-        <div class="nav_btn">Month</div>
-        <div class="nav_btn">Year</div>
+       
+        <div class="nav_btn active">Month</div>
       </div>
     </nav>
     <section class="container">
       <div class="side" id="side">
         <div class="tasks_container">
           <p class="task_header">Tasks</p>
-          <div class="tasks_list">
-            <div class="task active">
-              <p>work</p>
-              <p>7 March 2023</p>
-            </div>
-            <div class="task finish">
-              <p>work</p>
-              <p>7 March 2023</p>
-            </div>
-          </div>
+          <div class="tasks_list" id="tasksList"></div>
         </div>
-        <div class="mini_calendar">
+        <div class="mini_calendar" id="miniCalendarBtn">
           <p class="mini_header">March</p>
           <div class="mini_days">
             <div class="name">S</div>
@@ -63,49 +57,49 @@
           </div>
           <div class="calendar_container">
             <div class="row">
-              <div class="day">1</div>
-              <div class="day">2</div>
-              <div class="day">3</div>
-              <div class="day">4</div>
-              <div class="day active">5</div>
-              <div class="day">6</div>
-              <div class="day">7</div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
             </div>
             <div class="row">
-              <div class="day">8</div>
-              <div class="day">9</div>
-              <div class="day">10</div>
-              <div class="day">11</div>
-              <div class="day">12</div>
-              <div class="day">13</div>
-              <div class="day">14</div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
             </div>
             <div class="row">
-              <div class="day">15</div>
-              <div class="day">16</div>
-              <div class="day">17</div>
-              <div class="day">18</div>
-              <div class="day">19</div>
-              <div class="day">20</div>
-              <div class="day">21</div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
             </div>
             <div class="row">
-              <div class="day">22</div>
-              <div class="day">23</div>
-              <div class="day">24</div>
-              <div class="day">25</div>
-              <div class="day">26</div>
-              <div class="day">27</div>
-              <div class="day">28</div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
             </div>
             <div class="row">
-              <div class="day">29</div>
-              <div class="day">30</div>
-              <div class="day">31</div>
-              <div class="day">1</div>
-              <div class="day">2</div>
-              <div class="day">3</div>
-              <div class="day">4</div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
+              <div class="day" id="miniDay"></div>
             </div>
           </div>
         </div>
@@ -122,59 +116,162 @@
         </div>
         <div class="main_calendar">
           <div class="row">
-            <div class="day_item">
-              <p class="day active">1</p>
-              <div class="task_overview">
-                <p class="item">work</p>
-                <p class="item">work</p>
-                <p class="more">+ 11 more</p>
-              </div>
+            <div class="day_item" id="dayItem">
+              <p class="day">1</p>
+              <div class="task_overview" id="taskOverview"></div>
             </div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
           </div>
           <div class="row">
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
           </div>
           <div class="row">
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
           </div>
           <div class="row">
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
           </div>
           <div class="row">
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
-            <div class="day_item"><p class="day">1</p></div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
+            <div class="day_item" id="dayItem">
+              <p class="day"></p>
+              <div class="task_overview" id="taskOverview"></div>
+            </div>
           </div>
-          <div class="plus_task">
+          <div class="plus_task" id="addTaskBtn">
             <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="task_input hidden" id="taskInput">
+            <input type="date" name="task_date" id="taskDate" />
+            <input type="text" name="task_des" id="taskDes" />
+            <button id="submitBtn">Submit</button>
           </div>
         </div>
       </div>
