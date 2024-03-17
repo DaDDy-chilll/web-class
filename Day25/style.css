@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&family=Inter&family=Jua&family=Inder&display=swap');
 *{
     box-sizing: border-box;
+    margin: 0;
 }
 
 body{
-    margin: 0;
     padding: 0;
+    overflow: hidden;
+
 }
 
 .nav{
@@ -66,7 +68,7 @@ body{
     font-family: "Protest Strike", sans-serif;
 }
 
-.nav_center .fa-solid{
+.nav_center .fa-chevron-right,.fa-chevron-left{
     font-size: 1.7rem;
     padding: 5%;
     border-radius: .3vmax;
@@ -74,7 +76,7 @@ body{
     transition: all .2s;
 }
 
-.fa-solid:hover{
+.fa-chevron-right:hover,.fa-chevron-left:hover{
     background-color: rgb(187, 187, 187);
     color: white;
 }
@@ -85,18 +87,198 @@ body{
     align-items: center;
     background-color: lightgray;
     width: 25%;
-    padding: .5%;
+    padding: .5% 0;
     border-radius: 5px;
 }
 
 .nav_option .nav_btn{
     font-size: 1.2rem;
     font-family: "Protest Strike", sans-serif;
-}
-
-.nav_btn.active{
-    background-color: white;
+    color: gray;
     padding: 1% 9%;
     border-radius: 6px;
+    cursor: pointer;
 
+}
+.nav_btn:hover{
+    color: black;
+}
+.nav_btn.active{
+    color: black;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.404);
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.container .side{
+    width: 22%;
+    padding: 0 .5%;
+}   
+
+
+
+.side .tasks_container{
+    width: 100%;
+    height: 40%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.452);
+    padding: 1%;
+}
+
+.tasks_container .task_header{
+    font-size: 1.4rem;
+    font-family: "Jua", sans-serif;
+    margin: .5rem;
+}
+
+.tasks_container .tasks_list{
+    width: 100%;
+}
+
+.tasks_list .task{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    margin: 1% 0;
+    border-radius: 5px;
+    font-family: "Inder", sans-serif;
+}
+.task.active{
+    border: 1px solid rgb(253, 74, 74);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.527);
+}
+
+.task.finish{
+    color: gray;
+    text-decoration: line-through;
+    border: 1px solid rgba(0, 0, 0, 0.589);
+
+}
+
+.side .mini_calendar{
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.452);
+    height: 100%;
+}
+
+.mini_calendar .mini_header{
+    font-family: "Inter", sans-serif;
+    padding: 3%;
+    font-size: 1.2rem;
+}
+
+.mini_calendar .mini_days{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1% 0;
+    font-family: "Inter", sans-serif;
+    color: gray;
+}
+
+.calendar_container .row{
+    display: flex;
+    align-items: center;
+    margin: 2% 0;
+}
+
+.calendar_container .row .day{
+    margin: 2% 2%;
+    width: 12%;
+    height: 5%;
+    padding: 1%;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+
+}
+
+.calendar_container .day.active{
+    background-color: #0E42FC;
+    color: white;
+    border-radius: 50%;
+}
+
+.main_screen{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.main_screen .day_name_container{
+    display: flex;
+    /* justify-content: space-around; */
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.425);
+
+}
+
+.day_name_container .day_name{
+    width: 15%;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    padding: .5%;
+    border-right: 1px solid rgba(0, 0, 0, 0.39);
+}
+
+.main_calendar .row{
+    display: flex;
+}
+
+.main_calendar .row .day_item{
+    width: 14.5%;
+    height: 7.4rem;
+    border: .5px solid rgba(0, 0, 0, 0.089);
+    padding: .5%;
+}
+
+.day_item p{
+    font-size: 1.5rem;
+}
+
+.day_item p.active{
+    background-color: #0E42FC;
+    display: inline;
+    padding: 1% 6%;
+    border-radius: 50%;
+    color: white;
+}
+
+.day_item .task_overview{
+    margin-top: 5%;
+}
+
+.task_overview .item{
+    font-size: 1.1rem;
+    background-color: lightgreen;
+    margin: 3% 0;
+    padding: 0 3%;
+    color: white;
+}
+
+.task_overview .more{
+    display: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.plus_task{
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+
+    background-color: #6A5BF4;
+    padding: 1.5%;
+    border-radius: 100%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.521);
+    cursor: pointer;
+
+}
+
+.plus_task .fa-plus{
+    font-size: 2rem;
+    color: white;
 }
