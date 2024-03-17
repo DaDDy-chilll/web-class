@@ -1,30 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Strike&family=Inter&family=Jua&family=Inder&display=swap');
-*{
+
+* {
     box-sizing: border-box;
     margin: 0;
 }
 
-body{
+body {
     padding: 0;
     overflow: hidden;
 
 }
 
-.nav{
+.nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: .3%;
-    box-shadow: 0 2px 2px  rgba(29, 29, 29, 0.11);
+    box-shadow: 0 2px 2px rgba(29, 29, 29, 0.11);
 }
 
-.nav_menu_icon{
+.nav_menu_icon {
     width: 2%;
     cursor: pointer;
     overflow: hidden;
 }
 
-.nav_menu_icon .line{
+.nav_menu_icon .line {
     width: 100%;
     height: 3px;
     background-color: black;
@@ -33,42 +34,45 @@ body{
     transition: all .2s;
 }
 
-.nav_menu_icon .line1_active{
+.nav_menu_icon .line1_active {
     transform-origin: left;
-    transform: translate(2px,-2px) rotate(37deg);
+    transform: translate(2px, -2px) rotate(37deg);
 }
-.nav_menu_icon .line2_active{
+
+.nav_menu_icon .line2_active {
     transform: translateX(-100%);
     opacity: 0;
 }
-.nav_menu_icon .line3_active{
+
+.nav_menu_icon .line3_active {
     transform-origin: left;
     transform: translate(2px, 2px) rotate(-37deg);
 }
 
-.nav_center{
+.nav_center {
     display: flex;
     align-items: center;
 }
 
-.nav_center .cur_date{
+.nav_center .cur_date {
     display: flex;
     align-items: center;
     margin: 0 10% 0 12%;
     cursor: pointer;
 }
 
-.nav_center .currInput{
+.nav_center .currInput {
     visibility: hidden;
 }
 
-.cur_date p{
+.cur_date p {
     font-size: 1.5rem;
     margin: 0;
     font-family: "Protest Strike", sans-serif;
 }
 
-.nav_center .fa-chevron-right,.fa-chevron-left{
+.nav_center .fa-chevron-right,
+.fa-chevron-left {
     font-size: 1.7rem;
     padding: 5%;
     border-radius: .3vmax;
@@ -76,12 +80,13 @@ body{
     transition: all .2s;
 }
 
-.fa-chevron-right:hover,.fa-chevron-left:hover{
+.fa-chevron-right:hover,
+.fa-chevron-left:hover {
     background-color: rgb(187, 187, 187);
     color: white;
 }
 
-.nav_option{
+.nav_option {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -91,7 +96,7 @@ body{
     border-radius: 5px;
 }
 
-.nav_option .nav_btn{
+.nav_option .nav_btn {
     font-size: 1.2rem;
     font-family: "Protest Strike", sans-serif;
     color: gray;
@@ -100,46 +105,61 @@ body{
     cursor: pointer;
 
 }
-.nav_btn:hover{
+
+.nav_btn:hover {
     color: black;
 }
-.nav_btn.active{
+
+.nav_btn.active {
     color: black;
     background-color: white;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.404);
 }
 
-.container{
+.container {
     display: flex;
     width: 100%;
     height: 100vh;
 }
 
-.container .side{
+.container .side {
     width: 22%;
     padding: 0 .5%;
-}   
+    transition: all .2s;
+}
 
+.side.close{
+   animation: sideCloseAni .2s alternate 1 forwards;
+}
 
+@keyframes sideCloseAni {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+        display: none;
+    }
+}
 
-.side .tasks_container{
+.side .tasks_container {
     width: 100%;
     height: 40%;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.452);
     padding: 1%;
 }
 
-.tasks_container .task_header{
+.tasks_container .task_header {
     font-size: 1.4rem;
     font-family: "Jua", sans-serif;
     margin: .5rem;
 }
 
-.tasks_container .tasks_list{
+.tasks_container .tasks_list {
     width: 100%;
 }
 
-.tasks_list .task{
+.tasks_list .task {
     width: 100%;
 
     display: flex;
@@ -149,30 +169,31 @@ body{
     border-radius: 5px;
     font-family: "Inder", sans-serif;
 }
-.task.active{
+
+.task.active {
     border: 1px solid rgb(253, 74, 74);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.527);
 }
 
-.task.finish{
+.task.finish {
     color: gray;
     text-decoration: line-through;
     border: 1px solid rgba(0, 0, 0, 0.589);
 
 }
 
-.side .mini_calendar{
+.side .mini_calendar {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.452);
     height: 100%;
 }
 
-.mini_calendar .mini_header{
+.mini_calendar .mini_header {
     font-family: "Inter", sans-serif;
     padding: 3%;
     font-size: 1.2rem;
 }
 
-.mini_calendar .mini_days{
+.mini_calendar .mini_days {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -181,13 +202,13 @@ body{
     color: gray;
 }
 
-.calendar_container .row{
+.calendar_container .row {
     display: flex;
     align-items: center;
     margin: 2% 0;
 }
 
-.calendar_container .row .day{
+.calendar_container .row .day {
     margin: 2% 2%;
     width: 12%;
     height: 5%;
@@ -197,18 +218,19 @@ body{
 
 }
 
-.calendar_container .day.active{
+.calendar_container .day.active {
     background-color: #0E42FC;
     color: white;
     border-radius: 50%;
 }
 
-.main_screen{
+.main_screen {
     width: 100%;
     height: 100%;
     position: relative;
 }
-.main_screen .day_name_container{
+
+.main_screen .day_name_container {
     display: flex;
     /* justify-content: space-around; */
     width: 100%;
@@ -216,7 +238,7 @@ body{
 
 }
 
-.day_name_container .day_name{
+.day_name_container .day_name {
     width: 15%;
     text-align: center;
     font-family: "Inter", sans-serif;
@@ -224,22 +246,22 @@ body{
     border-right: 1px solid rgba(0, 0, 0, 0.39);
 }
 
-.main_calendar .row{
+.main_calendar .row {
     display: flex;
 }
 
-.main_calendar .row .day_item{
+.main_calendar .row .day_item {
     width: 14.5%;
     height: 7.4rem;
     border: .5px solid rgba(0, 0, 0, 0.089);
     padding: .5%;
 }
 
-.day_item p{
+.day_item p {
     font-size: 1.5rem;
 }
 
-.day_item p.active{
+.day_item p.active {
     background-color: #0E42FC;
     display: inline;
     padding: 1% 6%;
@@ -247,11 +269,11 @@ body{
     color: white;
 }
 
-.day_item .task_overview{
+.day_item .task_overview {
     margin-top: 5%;
 }
 
-.task_overview .item{
+.task_overview .item {
     font-size: 1.1rem;
     background-color: lightgreen;
     margin: 3% 0;
@@ -259,26 +281,24 @@ body{
     color: white;
 }
 
-.task_overview .more{
+.task_overview .more {
     display: none;
     font-size: 1rem;
     font-weight: bold;
 }
 
-.plus_task{
+.plus_task {
     position: absolute;
     bottom: 15%;
     right: 5%;
-
     background-color: #6A5BF4;
     padding: 1.5%;
     border-radius: 100%;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.521);
     cursor: pointer;
-
 }
 
-.plus_task .fa-plus{
+.plus_task .fa-plus {
     font-size: 2rem;
     color: white;
 }
