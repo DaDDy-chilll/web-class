@@ -33,8 +33,14 @@ body{
     margin: 1% 2%;
     perspective: 500px;
     perspective-origin: center;
+    transform-origin: center;
+    transform:  rotateY(-180deg);
+    transition: all 1s;
 }
 
+.card:hover{
+    transform: translateY(0);
+}
 
 .card img{
     border-radius: 1vmax;
@@ -53,8 +59,7 @@ body{
 
 }
 
-
-/* .card::before{
+.card::before{
     content: '';
     position: absolute;
     top: 0;
@@ -68,9 +73,9 @@ body{
     transform: rotate(0);
 }
 .card:hover::before{
-    transform: rotateX('180deg');
+    transform: rotateY(-180deg);
     opacity: 0;
-} */
+}
 
 .card[data-planet='jupiter']::after{
     background:linear-gradient(1800deg,#0EE3F0,#ffffff00);
