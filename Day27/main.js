@@ -56,6 +56,8 @@ let newTime;
 let setupFinish = false;
 let cardCount=0;
 
+
+// setup game
 (() => {
   const newPlanets = planets.sort(() => Math.random() - 0.5);
   newPlanets.forEach((planet) => {
@@ -96,7 +98,7 @@ let cardCount=0;
 })();
 
 
-
+// first View
 function firstHint () {
   const cards = document.querySelectorAll("#card");
   cards.forEach(card => {
@@ -111,6 +113,7 @@ setTimeout(() => {
 },4000)   
 }
 
+// User Click Event
 function userClick(element) {
   if(+element.getAttribute('clicked') === 1) return;
   element.setAttribute('clicked',1)
@@ -122,6 +125,7 @@ function userClick(element) {
   tempArr = [];
 }
 
+// Check Card Wrong or Right
 function checkCard() {
   const elementOne = tempArr[0];
   const elementTwo = tempArr[1];
@@ -132,6 +136,7 @@ function checkCard() {
       : false;
   cardChange(elementOne, elementTwo, isSame);
 }
+
 
 function cardChange(elementOne, elementTwo, isSame) {
   const cards = document.querySelectorAll("#card");
@@ -146,16 +151,18 @@ function cardChange(elementOne, elementTwo, isSame) {
   });
 }
 
+// Card Change When Rignt
 function rightCard(card) {
   card.setAttribute("data-user", "clicked");
   setTimeout(() => {
     card.classList.add("hidden_card");
+  checkWin();
   }, 700);
   cardCount++;
-  checkWin();
 
 }
 
+// Card Change When Wrong
 function wrongCard(card) {
   card.classList.add("wrong_card");
   card.children[0].children[1].classList.add("wrong_color");
@@ -169,6 +176,7 @@ function wrongCard(card) {
   }, 700);
 }
 
+//check win
 function checkWin () {
 if(cardCount === 12) gameWin();
 }
@@ -186,14 +194,10 @@ function gameOver () {
   })
 }
 
-function startCounter() {
-  intervalId = setInterval(countTime, 1000); // Store the interval ID
-}
 
-function stopCounter() {
-  clearInterval(intervalId); // Clear the interval using the stored ID
-}
 
+
+//Counter
 function countTime() {
   if (timer === -1) {
     stopCounter(); // Stop the counter when timer reaches -1
@@ -209,4 +213,12 @@ function countTime() {
   time.innerText = newTime;
   timer--;
   console.log('hi');
+}
+
+function startCounter() {
+  intervalId = setInterval(countTime, 1000); // Store the interval ID
+}
+
+function stopCounter() {
+  clearInterval(intervalId); // Clear the interval using the stored ID
 }

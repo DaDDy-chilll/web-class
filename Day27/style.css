@@ -14,6 +14,7 @@ body {
     perspective: 500px;
 }
 
+/* Container */
 .conatiner {
     width: 100%;
     height: 90vh;
@@ -33,6 +34,7 @@ body {
 
 }
 
+/* Card Container */
 .card_container .card {
     width: 12%;
     position: relative;
@@ -44,17 +46,6 @@ body {
     overflow: hidden;
     cursor: pointer;
 }
-
-/* .card:hover .card_back {
-    transform: rotateY(0);
-}
-
-
-.card:hover .card_front {
-    transform: rotateY(180deg);
-} */
-
-
 
 .card_back {
     position: relative;
@@ -124,6 +115,66 @@ body {
     transform: translateZ(20px);
 }
 
+
+.card[data-user='clicked'] .card_front {
+    transform: rotateY(180deg);
+}
+.card[data-user='clicked'] .star_container{
+    opacity: 0;
+}
+.card[data-user='clicked'] .card_back {
+    transform: rotateY(0);
+}
+
+.card[data-planet='jupiter'] .card_back::after {
+    background: linear-gradient(1800deg, #0EE3F0, #ffffff00);
+}
+
+.card[data-planet='mars'] .card_back::after {
+    background: linear-gradient(1800deg, #0062A1, #ffffff00);
+}
+
+.card[data-planet='earth'] .card_back::after {
+    background: linear-gradient(1800deg, #D7B5A0, #ffffff00);
+}
+
+.card[data-planet='sun'] .card_back::after {
+    background: linear-gradient(1800deg, #0C0D07, #ffffff00);
+}
+
+.card[data-planet='mercury'] .card_back::after {
+    background: linear-gradient(1800deg, #AD724A, #ffffff00);
+}
+
+.card[data-planet='venus'] .card_back::after {
+    background: linear-gradient(1800deg, #25235A, #ffffff00);
+}
+
+/* Planets */
+.card .planets {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    transform: translateZ(50px);
+}
+
+/* Planets Name */
+.card .planets_name {
+    transform: translateZ(50px);
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    font-family: "Italiana", sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    z-index: 10;
+}
+
+
+/* Global Style */
+
 .active_color{
     width: 100%;
     height: 100%;
@@ -161,58 +212,4 @@ body {
     0%,100%{transform: translate(0);}
     25%{transform: translate(0.125rem);}
     75%{transform: translate(-0.125rem);}
-}
-
-.card[data-user='clicked'] .card_front {
-    transform: rotateY(180deg);
-}
-.card[data-user='clicked'] .star_container{
-    opacity: 0;
-}
-.card[data-user='clicked'] .card_back {
-    transform: rotateY(0);
-}
-
-.card[data-planet='jupiter'] .card_back::after {
-    background: linear-gradient(1800deg, #0EE3F0, #ffffff00);
-}
-
-.card[data-planet='mars'] .card_back::after {
-    background: linear-gradient(1800deg, #0062A1, #ffffff00);
-}
-
-.card[data-planet='earth'] .card_back::after {
-    background: linear-gradient(1800deg, #D7B5A0, #ffffff00);
-}
-
-.card[data-planet='sun'] .card_back::after {
-    background: linear-gradient(1800deg, #0C0D07, #ffffff00);
-}
-
-.card[data-planet='mercury'] .card_back::after {
-    background: linear-gradient(1800deg, #AD724A, #ffffff00);
-}
-
-.card[data-planet='venus'] .card_back::after {
-    background: linear-gradient(1800deg, #25235A, #ffffff00);
-}
-
-.card .planets {
-    position: absolute;
-    top: 20%;
-    left: 25%;
-    transform: translateZ(50px);
-}
-
-.card .planets_name {
-    transform: translateZ(50px);
-    position: absolute;
-    bottom: 10%;
-    width: 100%;
-    font-family: "Italiana", sans-serif;
-    font-size: 2rem;
-    color: white;
-    text-transform: capitalize;
-    text-align: center;
-    z-index: 10;
 }
