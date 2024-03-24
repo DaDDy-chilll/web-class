@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Kode+Mono&display=swap');
 
 * {
     margin: 0;
@@ -18,9 +18,13 @@ body {
     width: 100%;
     height: 90vh;
     border-radius: 2vmax;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);
 }
 
+.conatiner .counter{
+    font-family: "Kode Mono", monospace;
+    text-align: center;
+    font-size: 4rem;
+}
 .conatiner .card_container {
     width: 100%;
     display: flex;
@@ -32,11 +36,23 @@ body {
 .card_container .card {
     width: 12%;
     position: relative;
-    margin: 1% 2%;
+    margin: 1% 2.3%;
+    perspective: 3000px;
     transform-style: preserve-3d;
     transform: perspective(3000px);
     transition: all 1s;
+    overflow: hidden;
+    cursor: pointer;
 }
+
+/* .card:hover .card_back {
+    transform: rotateY(0);
+}
+
+
+.card:hover .card_front {
+    transform: rotateY(180deg);
+} */
 
 
 
@@ -66,18 +82,93 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: #BFEFFF;
     z-index: 10;
     border-radius: 1vmax;
     transition: all 1s;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card_front .star_color{
+
+    position: absolute;
+    transition: all .2s;
+
+}
+
+.card:hover .star_color{
+    width: 100%;
+    height: 100%;
+    border-radius: 1vmax;
+}
+
+.card_front .star_container{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(41, 113, 38);
+    border-radius: 100%;
+    z-index: 1;
+    transition: all 1s;
+
+}
+
+.star_container .star{
+    transform: translateZ(20px);
+}
+
+.active_color{
+    width: 100%;
+    height: 100%;
+    border-radius: 1vmax;
+    background-color: rgb(136, 255, 142);
+
+}
+
+.hidden_color{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: rgb(136, 255, 142);
+
+}
+
+.wrong_color{
+    width: 100%;
+    height: 100%;
+    border-radius: 1vmax;
+    background-color: rgb(255, 106, 106);
+}
+
+
+.hidden_card{
+    visibility: hidden;
+}
+
+
+.wrong_card{
+    animation: shake 300ms;
+}
+
+@keyframes shake {
+    0%,100%{transform: translate(0);}
+    25%{transform: translate(0.125rem);}
+    75%{transform: translate(-0.125rem);}
 }
 
 .card[data-user='clicked'] .card_front {
     transform: rotateY(180deg);
 }
-
+.card[data-user='clicked'] .star_container{
+    opacity: 0;
+}
 .card[data-user='clicked'] .card_back {
     transform: rotateY(0);
 }

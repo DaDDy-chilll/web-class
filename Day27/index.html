@@ -6,30 +6,8 @@
   </head>
   <body>
     <div class="conatiner">
-      <h1>00</h1>
-      <div class="card_container" id="cardContainer" >
-        <div
-          class="card"
-          data-planet="earth"
-          data-tilt
-          data-tilt-speed="400"
-          data-tilt-max="20"
-          data-tilt-scale="1.2"
-          data-user='clickable'
-        >
-          <div class="card_front"></div>
-
-          <div class="card_back">
-            <img src="assets/universe/earth.jpg" alt="earth" width="100%" />
-            <img
-              src="assets/planets/earth.png"
-              alt="earth"
-              class="planets"
-              width="50%"
-            />
-            <p class="planets_name">earth</p>
-          </div>
-        </div>
+      <h1 class="counter" id="time">00</h1>
+      <div class="card_container" id="cardContainer" aria-disabled="true">
       </div>
     </div>
     <script
@@ -38,7 +16,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <!-- <script src="main.js" defer></script> -->
-
+    <script src="main.js" defer></script>
   </body>
 </html>
