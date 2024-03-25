@@ -50,13 +50,12 @@ const planets = [
 ];
 const cardContainer = document.getElementById("cardContainer");
 const time = document.getElementById("time");
-const alertBox = document.getElementById('alertBox')
+const alertBox = document.getElementById("alertBox");
+const startGame = document.getElementById("startGame");
 let tempArr = [];
 let timer = 50;
 let newTime;
-let setupFinish = false;
-let cardCount=0;
-
+let cardCount = 0;
 
 // setup game
 (() => {
@@ -95,29 +94,31 @@ let cardCount=0;
     cardContainer.innerHTML += card;
   });
   VanillaTilt.init(document.querySelectorAll(".card"));
-  firstHint();
 })();
 
+function playGame() {
+  startGame.classList.add("hidden_start_game");
+  firstHint();
+}
 
 // first View
-function firstHint () {
+function firstHint() {
   const cards = document.querySelectorAll("#card");
-  cards.forEach(card => {
+  cards.forEach((card) => {
     card.setAttribute("data-user", "clicked");
     setTimeout(() => {
-        card.setAttribute("data-user", "clickable");
-    },3000)
-  })
-setTimeout(() => {
-  startCounter()
-
-},4000)   
+      card.setAttribute("data-user", "clickable");
+    }, 3000);
+  });
+  setTimeout(() => {
+    startCounter();
+  }, 4000);
 }
 
 // User Click Event
 function userClick(element) {
-  if(+element.getAttribute('clicked') === 1) return;
-  element.setAttribute('clicked',1)
+  if (+element.getAttribute("clicked") === 1) return;
+  element.setAttribute("clicked", 1);
   tempArr.push(element);
   element.children[0].children[1].classList.remove("hidden_color");
   element.children[0].children[1].classList.add("active_color");
@@ -138,7 +139,6 @@ function checkCard() {
   cardChange(elementOne, elementTwo, isSame);
 }
 
-
 function cardChange(elementOne, elementTwo, isSame) {
   const cards = document.querySelectorAll("#card");
   cards.forEach((card) => {
@@ -157,10 +157,9 @@ function rightCard(card) {
   card.setAttribute("data-user", "clicked");
   setTimeout(() => {
     card.classList.add("hidden_card");
-  checkWin();
+    if (cardCount === 12) gameWin();
   }, 700);
   cardCount++;
-
 }
 
 // Card Change When Wrong
@@ -173,38 +172,31 @@ function wrongCard(card) {
     // card.children[0].children[1].classList.add("wrong_card");
     card.children[0].children[1].classList.add("hidden_color");
     card.classList.remove("wrong_card");
-    card.setAttribute('clicked',0)
+    card.setAttribute("clicked", 0);
   }, 700);
 }
 
-//check win
-function checkWin () {
-if(cardCount === 12) gameWin();
-}
 
-function gameWin () {
-  alertBox.children[0].innerText='Congratulation! You Win!'
-  setTimeout(()=>{
-    alertBox.classList.remove('hidden_alert')
-    alertBox.classList.add('show_alert')
-  },700)
+function gameWin() {
+  alertBox.children[0].innerText = "Congratulation! You Win!";
+  setTimeout(() => {
+    alertBox.classList.remove("hidden_alert");
+    alertBox.classList.add("show_alert");
+  }, 700);
   stopCounter();
 }
 
-function gameOver () {
-  const cards = document.querySelectorAll('#card')
-  alertBox.children[0].innerText='Game Over! Try Again.'
-  setTimeout(()=>{
-    alertBox.classList.remove('hidden_alert')
-    alertBox.classList.add('show_alert')
-  },700)
-  cards.forEach(card => {
-    card.setAttribute('clicked',1)
-  })
+function gameOver() {
+  const cards = document.querySelectorAll("#card");
+  alertBox.children[0].innerText = "Game Over! Try Again.";
+  setTimeout(() => {
+    alertBox.classList.remove("hidden_alert");
+    alertBox.classList.add("show_alert");
+  }, 700);
+  cards.forEach((card) => {
+    card.setAttribute("clicked", 1);
+  });
 }
-
-
-
 
 //Counter
 function countTime() {
@@ -221,7 +213,6 @@ function countTime() {
   }
   time.innerText = newTime;
   timer--;
-  console.log('hi');
 }
 
 function startCounter() {
@@ -232,12 +223,11 @@ function stopCounter() {
   clearInterval(intervalId); // Clear the interval using the stored ID
 }
 
-
-function closeAlert () {
-  alertBox.classList.remove('show_alert');
-  alertBox.classList.add('hidden_alert')
+function closeAlert() {
+  alertBox.classList.remove("show_alert");
+  alertBox.classList.add("hidden_alert");
 }
 
-
- 
-function reload() {  location.reload() }
+function reload() {
+  location.reload();
+}
