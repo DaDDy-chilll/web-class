@@ -236,5 +236,8 @@ function stopCounter() {
 function closeAlert () {
   alertBox.classList.remove('show_alert');
   alertBox.classList.add('hidden_alert')
-  location.reload()
 }
+
+
+ 
+function reload() {  location.reload() }
