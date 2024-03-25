@@ -50,6 +50,7 @@ const planets = [
 ];
 const cardContainer = document.getElementById("cardContainer");
 const time = document.getElementById("time");
+const alertBox = document.getElementById('alertBox')
 let tempArr = [];
 let timer = 50;
 let newTime;
@@ -182,13 +183,21 @@ if(cardCount === 12) gameWin();
 }
 
 function gameWin () {
-  alert('Game Win!')
+  alertBox.children[0].innerText='Congratulation! You Win!'
+  setTimeout(()=>{
+    alertBox.classList.remove('hidden_alert')
+    alertBox.classList.add('show_alert')
+  },700)
   stopCounter();
 }
 
 function gameOver () {
   const cards = document.querySelectorAll('#card')
-  alert('Game Over!')
+  alertBox.children[0].innerText='Game Over! Try Again.'
+  setTimeout(()=>{
+    alertBox.classList.remove('hidden_alert')
+    alertBox.classList.add('show_alert')
+  },700)
   cards.forEach(card => {
     card.setAttribute('clicked',1)
   })
@@ -221,4 +230,11 @@ function startCounter() {
 
 function stopCounter() {
   clearInterval(intervalId); // Clear the interval using the stored ID
+}
+
+
+function closeAlert () {
+  alertBox.classList.remove('show_alert');
+  alertBox.classList.add('hidden_alert')
+  location.reload()
 }
